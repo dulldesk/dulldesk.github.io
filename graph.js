@@ -111,6 +111,7 @@
 		img.setAttribute("class","image");
 		img.setAttribute("src",node.src);
 		img.setAttribute("draggable","false");
+		img.addEventListener('contextmenu', event => event.preventDefault());
 
 		let cap = document.createElement("p");
 		cap.innerHTML = node.caption;
@@ -129,6 +130,10 @@
 		});
 */
 /*
+
+		let modb = document.createElement("div");
+		modb.setAttribute("class","modal-back");
+
 		let mod = document.createElement("div");
 		mod.setAttribute("class","modal");
 
@@ -136,17 +141,19 @@
 		btn.setAttribute("class","modal-btn");
 		btn.innerHTML = "&times;";
 		btn.addEventListener('click', function() {
-			mod.style.display = "none";
+			modb.style.display = "none";
 		});
 
 		mod.appendChild(btn);
-
-		div.addEventListener("click",function () {
-			mod.style.display = "block";
-			console.log("here");
+		img.addEventListener("click",function () {
+			modb.style.display = "block";
+			mod.style.display="inline-block";
 		});
-		div.appendChild(mod);*/
 
+
+		modb.appendChild(mod);
+		document.body.appendChild(modb);
+*/
 		// shady solutions
 		let spc = document.createElement("div");
 		let toss = document.createElement("p");

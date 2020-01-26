@@ -2,6 +2,7 @@
 	display:flex;
 	justify-content: center;
 	flex-wrap: wrap;
+	z-index:0;
 }
 
 .node {
@@ -70,14 +71,24 @@
 	border-bottom-color:black;
 }
 
+.modal-back {
+	position:fixed;
+	top:0px;
+	height:100%;
+	width:100%;
+	display:none;
+	z-index:2;
+	background-color: rgba(50,50,50,0.5);
+}
 
 .modal {
-	width:50%;
-	height:50%;
-	position:fixed;
-	margin:auto;
+	width:500px;
+	height:450px;
+	position:absolute;
+	margin:0 auto;
 	display:none;
 	border:5px dashed red;
+	text-align: center;
 	z-index:5;
 }
 
@@ -88,4 +99,8 @@
 	font-size:20px;
 	z-index:6;
 	padding:5px;
+}
+
+body {
+	z-index: -1;
 }
