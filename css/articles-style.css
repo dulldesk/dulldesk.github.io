@@ -1,0 +1,31 @@
+pre {
+	border-radius:15px;
+}
+
+.code-cntr {
+	margin-top:25px;
+}
+
+.title-cntr {
+	/*display:inline-block;*/
+	text-align: center;
+	/*display:inline-flex;*/
+	/*flex-direction: column;*/
+	/*justify-content: center;*/
+	/*margin:0 auto;*/
+	margin-bottom: -10px;
+}
+
+.title-cntr span {
+	display:inline-block;
+}
+
+.title-cntr hr {
+	position:relative; 
+	top:-15px;
+	opacity: 0.7;
+	border-color: var(--green);
+	background-color: var(--green);
+	width: 60%;
+	height: 3px;
+}

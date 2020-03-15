@@ -1,4 +1,4 @@
-#graph-cntr {
+#node-cntr {
 	display:flex;
 	justify-content: center;
 	flex-wrap: wrap;
@@ -7,7 +7,7 @@
 
 .node {
 	position:relative;
-	border-color: rgb(220, 230, 250); /*rgb(255, 230, 150);*/
+	border-color: var(--lgt-green); /*rgb(220, 230, 250);*/ /*rgb(255, 230, 150);*/
 	border-style: solid;
 	border-width: 4px;
 	background-color: white;

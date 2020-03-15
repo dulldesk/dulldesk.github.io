@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css?family=Lato|Titillium+Web:600&display=swap');
+
+/*colour variables*/
+:root {
+	/* primary */
+	--green: #225E38;
+	/* secondary */
+	--lgt-green: #8ca096;
+	/*tbd*/
+}
+/*
+coolors.co/79b791-abd1b9-edf4f0-1e5131-0f301c
+*/
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background-color: #fafafa;
+}
+
+/*text styling*/
+
+.title, h1, h2, h3, h4, h5, h6 {
+	font-family: 'Titillium Web', sans-serif;
+	font-weight: 600;
+}
+
+p, li, a {
+	font-family: 'Lato', sans-serif;
+}
+
+li {
+	line-height: 200%;
+}
+
+p {
+	line-height: 160%;
+}
+
+.intro, .title {
+	text-align: center;
+}
+
+.title {
+	font-size:240%;
+	color:var(--green);
+	font-weight: 700;
+}
+
+a, a:visited {
+	text-decoration-line: none;
+	color: black; /*change*/
+	transition: color 0.2s ease-out;
+}
+
+a:hover {
+	text-decoration-line: none;
+	color: var(--lgt-green); /*change*/
+}
+
+/*title*/
+
+.title-cntr {
+	/*display:inline-block;*/
+	text-align: center;
+	/*display:inline-flex;*/
+	/*flex-direction: column;*/
+	/*justify-content: center;*/
+	/*margin:0 auto;*/
+	margin-bottom: -10px;
+}
+
+.title-cntr span {
+	display:inline-block;
+}
+
+.title-cntr hr {
+	position:relative; 
+	top:-15px;
+	opacity: 0.7;
+	border-color: var(--green);
+	background-color: var(--green);
+	width: 62%;
+	height: 3px;
+}
+
+/*containers*/
+
+.cntr {
+	padding: 0 90px;
+	width:100%;
+}
+
+@media screen and (max-width:500px) {
+	.cntr {
+		padding:0 5%;
+	}
+}
+
+.flex-cntr {
+	display:flex;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+/*menu bar*/
+
+nav {
+	width:90%;
+	margin: 0px 5%;
+	display:flex;
+	/*height:60px;*/
+	flex-direction: row;
+	align-items: center;
+	align-content: center;
+	justify-content: space-between;
+    color: var(--green);
+}
+
+.menubar {
+    font-family:'Lato',sans-serif;
+    flex-direction: inherit;
+    display: flex;
+	justify-content: inherit; /*space-between;*/
+	min-width: 300px;
+	/*font-weight:600;*/
+}
+
+.menuitem {
+	text-decoration-line: none;
+    display: inline-flex;
+    color:inherit;
+}
+
+/*responsive menu bar*/
+
+@media screen and (max-width: 500px) {
+	nav {
+		flex-direction: column;
+	}
+
+	.menubar {
+		align-items: center;
+	}
+
+	.menuitem {
+		margin:5px 0px;
+	}
+
+	.header-title {
+		margin:5px 0px;
+	}
+}

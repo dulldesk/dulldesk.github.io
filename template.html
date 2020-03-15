@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Template article</title>
+    <link rel="icon" type="image/png" href="img/img4.png">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/articles-style.css">
+    <link rel="stylesheet" type="text/css" href="vendor/prism/prism.css">
+</head>
+<body>
+    <nav id='navbar'>
+        <h1 class="header-title">dulldesk</h1>
+        <div class="menubar">
+            <a href="index.html" class="menuitem">Home</a>
+            <a href="projects.html" class="menuitem">Projects</a>
+            <a href="articles.html" class="menuitem">Articles</a>
+            <a href="contact.html" class="menuitem">Contact</a>
+        </div>
+    </nav>
+    <div class="cntr">
+        <div class="title-cntr">
+            <span>
+                <h1 class="title">The Article Title</h1>
+                <hr />
+            </span>
+        </div>
+        <p>Programming is always fun, sometimes. </p>
+        <ul>
+            <li>words</li>
+            <li>words</li>
+            <li>words</li>
+            <li>words</li>
+        </ul>
+        <h1>Heading</h1>
+        <p>words words words words words words words words words words words </p>
+        <div class='code-cntr'>
+            <pre><code class="lang-java">import java.io.*;
+import java.util.*;
+public class Main {
+    public static void main(String args[]) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        PrintWriter pw = new PrintWriter(new BufferedWriter(new OutputStreamWriter(System.out)));
+        
+        StringTokenizer st = new StringTokenizer(br.readLine());
+        int n = Integer.parseInt(br.readLine());
+        int m = Integer.parseInt(st.nextToken());
+        
+        pw.println();
+    }
+    static class Pair {
+        int f,s;
+        Pair(int a, int b) {
+            f=a;s=b;
+        }
+    }
+}</code></pre>
+        </div>
+    </div>
+    <br>
+    <br>
+    <script src="vendor/prism/prism.js"></script>
+</body>
+</html>
