@@ -89,7 +89,7 @@ a:hover {
 /*containers*/
 
 .cntr {
-	padding: 0 90px;
+	padding: 0 120px;
 	width:100%;
 }
 
@@ -116,6 +116,9 @@ nav {
 	align-items: center;
 	align-content: center;
 	justify-content: space-between;
+}
+
+nav, nav a:visited {
     color: var(--green);
 }
 
