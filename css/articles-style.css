@@ -3,5 +3,34 @@ pre {
 }
 
 .code-cntr {
-	margin-top:25px;
+	/*margin-top:25px;*/
+}
+
+#select-lang button {
+	border-radius:10px;
+	height:50px;
+	background-color:#f0fff5;
+	text-align: center;
+	display:inline-block;
+	margin:10px;
+
+	border:1px solid black;
+}
+
+#select-lang button:focus {
+	outline:none;
+}
+
+#select-lang img {
+	height:30px;
+  vertical-align: -10px;
+}
+/*
+#select-lang {
+	display:flex;
+	flex-direction: row;
+}*/
+
+.java, .cpp, .py, .js, .posh {
+	display: none
 }

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Multi Language template</title>
+    <link rel="icon" type="image/png" href="img/img4.png">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/articles-style.css">
+    <link rel="stylesheet" type="text/css" href="vendor/prism/prism.css">
+    <!-- <link href="https://myCDN.com/prism@v1.x/themes/prism.css" rel="stylesheet" /> -->
+</head>
+<body>
+    <nav id='navbar'>
+        <h1 class="header-title">dulldesk</h1>
+        <div class="menubar">
+            <a href="index.html" class="menuitem">Home</a>
+            <a href="projects.html" class="menuitem">Projects</a>
+            <a href="articles.html" class="menuitem">Articles</a>
+            <a href="contact.html" class="menuitem">Contact</a>
+        </div>
+    </nav>
+    <div class="cntr">
+        <div class="title-cntr">
+            <span>
+                <h1 class="title">For Loops</h1>
+                <hr />
+            </span>
+        </div>
+        <p>For loops are a fundamental part of programming.</p>
+        <p>This tutorial is available in several different programming languages, as their syntax varies. Select the ones you wish to see:</p>
+        <div id="select-lang">
+            <button id="all">All</button>
+            <button id="java">Java</button>
+            <button id="cpp">C++</button>
+            <button id="py">Python</button>
+            <button id="js">JavaScript</button>
+            <button id="posh">PowerShell</button>
+        </div>
+
+        <h1>Components of a for loop</h1>
+        <p>words words words words words words words words words words words </p>
+        <div class="code-cntr">
+            <div class='java cpp'>
+                <p>In Java and C++, ...</p>
+                <pre><code class="lang-java">
+                    for (int i=0; i<10; i++) {
+                        // code
+                    } 
+                    </code></pre>
+            </div>
+            <div class='py'>
+                <p>In Python, ... </p>
+                <pre><code class="lang-python">
+                    for i in range(10):
+                        #code 
+                </code></pre>
+                <p><code class="lang-python">range()</code> is a function that generates ... </p>
+            </div>
+            <div class='js'>
+                <p>In JavaScript, ... </p>
+                <pre><code class="lang-javascript">
+                    for (let i=0; i<10; i++) {
+                        // code
+                    } 
+                </code></pre>
+            </div>
+            <div class='posh'>
+                <p>In PowerShell, ... </p>
+                <pre><code class="lang-powershell">
+                    for ($i=0; $i -lt 10; $i++) {
+                        # code
+                    } </code></pre>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <script src="js/multi-lang.js"></script>
+    <script src="vendor/prism/prism.js"></script>
+    <!-- <script src="https://myCDN.com/prism@v1.x/components/prism-core.min.js"></script> -->
+    <!-- <script src="https://myCDN.com/prism@v1.x/plugins/autoloader/prism-autoloader.min.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.19.0/plugins/normalize-whitespace/prism-normalize-whitespace.min.js"></script>
+
+</body>
+</html>

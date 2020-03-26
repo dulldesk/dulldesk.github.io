@@ -1,4 +1,6 @@
-@import url('https://fonts.googleapis.com/css?family=Lato|Titillium+Web:600&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Work+Sans|Open+Sans&display=swap');
+/*@import url('https://fonts.googleapis.com/css?family=Lato|Titillium+Web&display=swap');*/
+/*Ruda*/
 
 /*colour variables*/
 :root {
@@ -18,25 +20,30 @@ coolors.co/79b791-abd1b9-edf4f0-1e5131-0f301c
 
 body {
 	background-color: #fafafa;
+	z-index: -1;
 }
 
 /*text styling*/
 
 .title, h1, h2, h3, h4, h5, h6 {
-	font-family: 'Titillium Web', sans-serif;
-	font-weight: 600;
+	font-family: 'Work Sans', sans-serif;
+	/*font-family: 'Titillium Web', sans-serif;*/
+	font-weight: 300;
+	color:var(--green);
+	/*font-weight: 600;*/
 }
 
 p, li, a {
-	font-family: 'Lato', sans-serif;
+	font-family: 'Open Sans', sans-serif;
+	/*font-family: 'Lato', sans-serif;*/
 }
 
 li {
-	line-height: 200%;
+	line-height: 210%;
 }
 
 p {
-	line-height: 160%;
+	line-height: 175%;
 }
 
 .intro, .title {
@@ -45,8 +52,8 @@ p {
 
 .title {
 	font-size:240%;
-	color:var(--green);
-	font-weight: 700;
+	/*color:var(--green);*/
+	/*font-weight: 700;*/
 }
 
 a, a:visited {
@@ -118,8 +125,13 @@ nav {
 	justify-content: space-between;
 }
 
-nav, nav a:visited {
+nav, nav a:link, nav a:active, nav a:visited   {
     color: var(--green);
+    /*font-size:120%;*/
+}
+
+nav a:hover   {
+    color: var(--lgt-green);
 }
 
 .menubar {
@@ -139,7 +151,7 @@ nav, nav a:visited {
 
 /*responsive menu bar*/
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 550px) {
 	nav {
 		flex-direction: column;
 	}
