@@ -9,7 +9,10 @@
 	/* secondary */
 	--lgt-green: #8ca096;
 	/*tbd*/
+	/* background */
+	--bkgd: #fafafa;
 }
+
 /*
 coolors.co/79b791-abd1b9-edf4f0-1e5131-0f301c
 */
@@ -19,8 +22,12 @@ coolors.co/79b791-abd1b9-edf4f0-1e5131-0f301c
 }
 
 body {
-	background-color: #fafafa;
+	background-color: var(--bkgd);
 	z-index: -1;
+}
+
+body > :not(nav) /*, body :not(nav > *) */{
+	padding:0 5%;
 }
 
 /*text styling*/
@@ -100,7 +107,7 @@ a:hover {
 	width:100%;
 }
 
-@media screen and (max-width:500px) {
+@media screen and (max-width:550px) {
 	.cntr {
 		padding:0 5%;
 	}
@@ -121,7 +128,7 @@ nav {
 	/*height:60px;*/
 	flex-direction: row;
 	align-items: center;
-	align-content: center;
+	/*align-content: center;*/
 	justify-content: space-between;
 }
 
