@@ -9,7 +9,11 @@
 </head>
 <body>
     <nav id='navbar'>
-        <h1 class="header-title">dulldesk</h1>
+        <div class="menu-logo">
+            <h1 class="header-title">dulldesk</h1>
+            <!-- <h1 class="menuham" onclick="$('.menubar').is(':visible') ? $('.menubar').slideUp() : ($('.menubar').slideDown() && $('.menubar').css('display','flex'))">≡</h1> -->
+            <h1 class="menuham" onclick="$('.menubar').is(':visible') ? $('.menubar').slideUp() : $('.menubar').slideDown()">≡</h1>
+        </div>
         <div class="menubar">
             <a href="index.html" class="menuitem">Home</a>
             <a href="projects.html" class="menuitem">Projects</a>
@@ -26,5 +30,6 @@
     <p class="intro">Description</p>
     <br>
     <br>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 </body>
 </html>

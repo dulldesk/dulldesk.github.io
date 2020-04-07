@@ -168,6 +168,21 @@ nav a:hover   {
     color:inherit;
 }
 
+.menuham {
+	display:none;
+	cursor: pointer;
+	/*transition: transform 0.5s ease-out;*/
+}
+
+nav * {
+	user-select: none;
+}
+
+.menuham {
+	/*transform: rotate(-90deg);*/
+	/*transition: transform 0.5s ease-out;*/
+}
+
 /*responsive menu bar*/
 
 @media screen and (max-width: 550px) {
@@ -176,14 +191,36 @@ nav a:hover   {
 	}
 
 	.menubar {
-		align-items: center;
+		/*align-items: center;*/
+		display:none;
+		flex-direction:row;
+		flex-wrap:wrap;
+		/*text-align:center;*/
 	}
 
 	.menuitem {
-		margin:5px 0px;
+		margin:5px 0;
+		width:49%;
+		/*flex: 50%;*/
+		justify-content:center;
 	}
 
 	.header-title {
-		margin:5px 0px;
+		/*margin:5px 0px;*/
+	}
+
+	.menuham {
+		display:block;
+	}
+
+	.menu-logo {
+		flex-direction:row;
+		justify-content: space-between;
+		width:100%;
+		display:flex;
+	}
+
+	.menu-logo > * {
+		display: inline-flex;
 	}
 }
