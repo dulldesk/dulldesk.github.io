@@ -17,6 +17,26 @@
 coolors.co/79b791-abd1b9-edf4f0-1e5131-0f301c
 */
 
+
+/* scrollbar? not very well supported */
+html {
+    overflow-y: scroll;
+}
+
+body::-webkit-scrollbar {
+	width: 6px;
+}
+
+body::-webkit-scrollbar-track {
+	display: none;
+}
+
+body::-webkit-scrollbar-thumb {
+	background-color: #555;
+	border-radius: 10px;
+}
+
+
 * {
 	box-sizing: border-box;
 }
