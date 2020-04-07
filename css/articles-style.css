@@ -6,31 +6,67 @@ pre {
 	/*margin-top:25px;*/
 }
 
+#select-lang .label {
+	display:none;
+	padding:7px;
+	margin: auto;
+	width:100%;
+}
+
 #select-lang button {
-	border-radius:10px;
+	border-radius:5px;
 	height:50px;
-	background-color:#f0fff5;
+	background-color: var(--bkgd);
 	text-align: center;
 	display:inline-block;
 	margin:10px;
 
 	border:1px solid black;
+	box-shadow: 0.5px 0.5px 2px grey;  
+	outline:none;
+	position: relative;
 }
 
-#select-lang button:focus {
-	outline:none;
+#select-lang button:active {
+	box-shadow: none;
+	left: 0.5px;
+	top: 0.5px;
 }
+
 
 #select-lang img {
 	height:30px;
-  vertical-align: -10px;
+  	vertical-align: -10px;
 }
-/*
+
 #select-lang {
-	display:flex;
-	flex-direction: row;
-}*/
+	display:block;
+	/*display:flex;*/
+	/*flex-direction: row;*/
+}
 
 .java, .cpp, .py, .js, .posh {
-	display: none
+	display: none;
+}
+
+@media screen and (max-width: 550px) {
+	#select-lang > *:not(.label)  {
+		display: none;
+	}
+	#select-lang > .label  {
+		display: inline-block;
+	}
+
+	#select-lang {
+		border: 1px solid black;
+		text-align: center;
+	}
+
+	#select-lang > button {
+		width:100%;
+		margin: 0;
+		border-radius: 0;
+		border:1px solid black;
+		border-width: 1px 0 0;
+	}
 }

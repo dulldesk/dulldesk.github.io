@@ -1,86 +1,107 @@
-let btns = document.getElementById("select-lang");
+const deselcol = "var(--bkgd)"; // deselected button colour
+const selcol = "rgb(225, 255, 225)"; // selected button colour
+
 
 var seen = new Set();
 var all = new Set();
 // var seenall = new Set();
 
 // change the colours
+$(document).ready(() => {
+	let btns = $('#select-lang');
+	$('#select-lang').children('button').each((toss,dombtn) => {
+		let btn = $(dombtn);
+		let id = btn.attr('id');
 
-for (let btn of btns.children) {
-	if (btn.id != 'all') all.add(btn.id);
+		if (id != 'all') all.add(id);
 
-	btn.addEventListener("click", function() {
-		if (btn.id == 'all'){
-			if (seen.has('all')) {
-				all.forEach(seen.add,seen);
-				btn.style.backgroundColor = "#f0fff5";
-				seen.delete('all');
+		btn.click(() => {
+			if (id == 'all'){
+				if (seen.has('all')) {
+					all.forEach(seen.add,seen);
+					seen.delete('all');
+					btn.css('background-color',deselcol);
+				} else {
+					seen.clear();
+					seen.add('all');
+					btn.css('background-color',selcol);
+				}
+				$('#select-lang').children('button:not(#all)').click();
+			} else if (seen.has(id)) {
+				console.log(`remove ${id}`);
+				seen.delete(id);
+				$(`.${id}`).each((toss,i) => {
+					if (shouldHide(i)) $(i).hide();
+				});
+				btn.css('background-color',deselcol);
+
+				if (seen.size != all.size+1 && seen.has('all')) {
+					seen.delete('all');
+					$('#all').css('background-color',deselcol);
+				}
 			} else {
-				seen.clear();
-				seen.add('all');
-				btn.style.backgroundColor = "rgb(197, 255, 197)";
+				console.log(`add ${id}`);
+				seen.add(id);
+				$(`.${id}`).show(); 
+				btn.css('background-color',selcol);
+
+				if (seen.size == all.size && !seen.has('all')) {
+					seen.add('all');
+					$('#all').css('background-color',selcol);
+				}
 			}
 
-			for (let btn of btns.children) {
-				if (btn.id != 'all') btn.click();
-			}
-		} else if (seen.has(btn.id)) {
-			console.log("remove "+btn.id);
-			seen.delete(btn.id);
-			for (let i of document.getElementsByClassName(btn.id)) {
-				change(i,'none');
-			}
-			btn.style.backgroundColor = "#f0fff5";
-		} else {
-			console.log("add "+btn.id);
-			seen.add(btn.id);
-			for (let i of document.getElementsByClassName(btn.id)) {
-				i.style.display = 'block';
-			}
-			btn.style.backgroundColor = "rgb(197, 255, 197)";
+		});
+
+		let img = document.createElement("img");
+		switch (id) {
+			case 'java':
+				img.src = "https://www.stickpng.com/assets/images/58480979cef1014c0b5e4901.png";
+				break;
+			case 'cpp':
+				img.src = "https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/ISO_C%2B%2B_Logo.svg/1200px-ISO_C%2B%2B_Logo.svg.png";
+				break;
+			case 'py':
+				img.src = "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1200px-Python-logo-notext.svg.png";
+				break;
+			case 'js':
+				img.src = 'https://cdn.worldvectorlogo.com/logos/nodejs-icon.svg';
+				break;
+			case 'posh':
+				img.src = 'https://upload.wikimedia.org/wikipedia/commons/2/2f/PowerShell_5.0_icon.png';
+				break;
+			case 'proc':
+				img.src = 'https://upload.wikimedia.org/wikipedia/commons/2/2e/Processing_3_logo.png';
+				break;
+			case 'all': 
+				
+				break;
 		}
-
-		if (seen.size == all.size && !seen.has('all')) {
-			seen.add('all');
-			document.getElementById('all').style.backgroundColor = "rgb(197, 255, 197)";
-		} else if (seen.size != all.size+1 && seen.has('all')) {
-			if (seen.has('all')) seen.delete('all');
-			document.getElementById('all').style.backgroundColor = "#f0fff5";
-
-		}
+		btn.html(`&nbsp&nbsp${btn.text()}`);
+		btn.prepend(img);
 	});
 
-	let img = document.createElement("img");
-	switch (btn.id) {
-		case 'java':
-			img.src = "https://www.stickpng.com/assets/images/58480979cef1014c0b5e4901.png";
-			break;
-		case 'cpp':
-			img.src = "https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/ISO_C%2B%2B_Logo.svg/1200px-ISO_C%2B%2B_Logo.svg.png";
-			break;
-		case 'py':
-			img.src = "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1200px-Python-logo-notext.svg.png";
-			break;
-		case 'js':
-			img.src = 'https://cdn.worldvectorlogo.com/logos/nodejs-icon.svg';
-			break;
-		case 'posh':
-			img.src = 'https://upload.wikimedia.org/wikipedia/commons/2/2f/PowerShell_5.0_icon.png';
-			break;
-		case 'proc':
-			img.src = 'https://upload.wikimedia.org/wikipedia/commons/2/2e/Processing_3_logo.png';
-			break;
-		case 'all': 
-			
-			break;
-	}
-	btn.innerHTML = "&nbsp&nbsp" + btn.innerHTML;
-	btn.insertBefore(img, btn.childNodes[0]);
-}
+	// default language
+	$('#java').click();
 
-function change(i,disp) {
+
+	$('#select-lang .label').click(() => {
+		$('#select-lang button').toggle();
+	});
+
+	$('body').click((e) => {
+	    if ($(e.target).closest('#select-lang').length === 0 && window.innerWidth <= 550) $('#select-lang button').hide();
+	});
+
+	$(window).resize(() => {
+		if (window.innerWidth > 550) $('#select-lang button').show();
+		else $('#select-lang button').hide();
+	});
+});
+
+function shouldHide(i) {
 	for (let c of i.classList) {
-		if (seen.has(c)) return;
+		if (seen.has(c)) return false;
 	}
-	i.style.display = disp;
+	return true;
 }
