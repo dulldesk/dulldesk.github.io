@@ -100,6 +100,18 @@ a:hover {
 	height: 3px;
 }
 
+#title-cntr {
+	text-align:left;
+	position:relative;
+	/*left:5%;*/
+	font-size:300%;
+}
+
+#title-cntr hr {
+	top:-50px;
+	width:80%;
+}
+
 /*containers*/
 
 .cntr {
