@@ -20,7 +20,8 @@ coolors.co/79b791-abd1b9-edf4f0-1e5131-0f301c
 
 /* scrollbar? not very well supported */
 html {
-    overflow-y: scroll;
+	overflow-y: overlay;
+	overflow-x: hidden;
 }
 
 body::-webkit-scrollbar {
@@ -46,7 +47,7 @@ body {
 	z-index: -1;
 }
 
-body > :not(nav) /*, body :not(nav > *) */{
+body > :not(nav)  /*, body :not(nav > *) */{
 	padding:0 5%;
 }
 
@@ -60,7 +61,7 @@ body > :not(nav) /*, body :not(nav > *) */{
 	/*font-weight: 600;*/
 }
 
-p, li, a {
+p, li, a, small {
 	font-family: 'Open Sans', sans-serif;
 	/*font-family: 'Lato', sans-serif;*/
 }
@@ -71,16 +72,6 @@ li {
 
 p {
 	line-height: 175%;
-}
-
-.intro, .title {
-	text-align: center;
-}
-
-.title {
-	font-size:240%;
-	/*color:var(--green);*/
-	/*font-weight: 700;*/
 }
 
 a, a:visited {
@@ -94,16 +85,38 @@ a:hover {
 	color: var(--lgt-green); /*change*/
 }
 
+.intro, .title {
+	text-align: center;
+}
+
+.title {
+	font-size:240%;
+	/*color:var(--green);*/
+	/*font-weight: 700;*/
+	display:inline-block;
+	margin-bottom: 15px;
+}
+
+@media (max-width: 600px) {
+	.title {
+		font-size: 22vw;
+	}
+}
+
+
 /*title*/
 
 .title-cntr {
 	/*display:inline-block;*/
 	text-align: center;
-	/*display:inline-flex;*/
 	/*flex-direction: column;*/
 	/*justify-content: center;*/
 	/*margin:0 auto;*/
-	margin-bottom: -10px;
+	margin-bottom: 25px;
+	text-align:left;
+	position:relative;
+	/*left:5%;*/
+	font-size:300%;
 }
 
 .title-cntr span {
@@ -112,25 +125,17 @@ a:hover {
 
 .title-cntr hr {
 	position:relative; 
-	top:-15px;
+	/*top:-20px;*/
+	/*top:-50px;*/
 	opacity: 0.7;
 	border-color: var(--green);
 	background-color: var(--green);
-	width: 62%;
-	height: 3px;
-}
-
-#title-cntr {
-	text-align:left;
-	position:relative;
-	/*left:5%;*/
-	font-size:300%;
-}
-
-#title-cntr hr {
-	top:-50px;
+	/*width: 62%;*/
 	width:80%;
+	height: 3px;
+	margin: 0 auto;
 }
+
 
 /*containers*/
 
@@ -165,18 +170,18 @@ nav {
 }
 
 nav, nav a:link, nav a:active, nav a:visited   {
-    color: var(--green);
-    /*font-size:120%;*/
+	color: var(--green);
+	/*font-size:120%;*/
 }
 
 nav a:hover   {
-    color: var(--lgt-green);
+	color: var(--lgt-green);
 }
 
 .menubar {
-    font-family:'Lato',sans-serif;
-    flex-direction: inherit;
-    display: flex;
+	font-family:'Lato',sans-serif;
+	flex-direction: inherit;
+	display: flex;
 	justify-content: inherit; /*space-between;*/
 	min-width: 300px;
 	/*font-weight:600;*/
@@ -184,8 +189,8 @@ nav a:hover   {
 
 .menuitem {
 	text-decoration-line: none;
-    display: inline-flex;
-    color:inherit;
+	display: inline-flex;
+	color:inherit;
 }
 
 .menuham {
@@ -243,4 +248,12 @@ nav * {
 	.menu-logo > * {
 		display: inline-flex;
 	}
+}
+
+
+.no-select {
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
 }

@@ -1,0 +1,50 @@
+
+
+.card {
+	/*padding:20px;*/
+	/*margin-top:5px;*/
+	/*margin-left:auto;*/
+	/*margin-right:auto;*/
+	margin:5px auto;
+	margin: 5px auto 10px;
+	/*margin-bottom: 10px; */
+
+	max-width:100%;
+	/*width: 20rem;*/
+	/*margin: 0 auto; */
+	float: none; /* Added */
+}
+
+.card:hover {
+	box-shadow: 5px 5px 10px grey;
+}
+
+.card, .card:hover {
+	transition: box-shadow 0.1s ease-out;
+}
+
+#node-cntr {
+	/*margin: 0 auto;*/
+	/*width:90%;*/
+	/*margin:auto;*/
+	margin: 0 5%;
+	/*padding: 0;*/
+}
+
+.card-link-icon {
+	opacity:0.4;
+}
+
+.card-link-icon:hover {
+	opacity:1;
+	cursor:pointer;
+}
+
+.card-link-icon, .card-link-icon:hover {
+	transition: opacity 0.2s ease-out;
+}
+
+/* a glitch sometimes appears upon hover, this is to circumvent it */
+.card-footer {
+	background-color: #f7f7f7;
+}
