@@ -86,7 +86,7 @@ a:hover {
 }
 
 .intro, .title {
-	text-align: center;
+	/*text-align: center;*/
 }
 
 .title {
@@ -95,6 +95,10 @@ a:hover {
 	/*font-weight: 700;*/
 	display:inline-block;
 	margin-bottom: 15px;
+
+	position:relative;
+	/* left property is due to font */
+	left:-10px; 
 }
 
 @media (max-width: 600px) {
@@ -133,7 +137,8 @@ a:hover {
 	/*width: 62%;*/
 	width:80%;
 	height: 3px;
-	margin: 0 auto;
+	/*margin: 0 auto;*/
+	margin: 0;
 }
 
 
