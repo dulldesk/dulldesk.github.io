@@ -20,11 +20,29 @@ const work = {
 		"link" : "https://www.google.ca",
 		"short" : "google.ca"
 	},
-	"gimmicks" : {
-		"name" : "Small HTML Pages",
-		"caption" : "A series of small, interactive HTML pages",
-		"lang" : "HTML, CSS, JavaScript"
-	},
+	"sched-del" : {
+		"name" : "Scheduled File Deleter",
+		"caption" : "PowerShell script to schedule file deletions",
+		"lang" : "PowerShell",
+		"github" : "https://github.com/dulldesk/sched-file-del"
+	}, 
+	// "gimmicks" : {
+	// 	"name" : "Small HTML Pages",
+	// 	"caption" : "A series of small, interactive HTML pages",
+	// 	"lang" : "HTML, CSS, JavaScript",
+	// 	"more" : [
+	// 		[{
+	// 			"link" : "https://www.google.ca",
+	// 			"text" : ""
+	// 		}, {
+	// 			"link" : "https://www.google.ca",
+
+	// 		}, {
+	// 			"link" : "https://www.google.ca",
+
+	// 		}]
+	// 	]
+	// },
 	"recycle" : {
 		"name" : "Recycle Bin Size Script",
 		"caption" : "A small script to check one's recycle bin size",
@@ -37,6 +55,7 @@ const icons = {
 	"github" : "https://raw.githubusercontent.com/primer/octicons/e65f8b2876b23a1157d97a0df7598c649f214149/icons/mark-github.svg",
 	"gist" : "https://raw.githubusercontent.com/primer/octicons/e65f8b2876b23a1157d97a0df7598c649f214149/icons/logo-gist.svg"
 }
+
 const bullet = '•';
 
 for (let key in work) {
@@ -69,13 +88,12 @@ for (let key in work) {
 		a.attr('href',node.link);
 
 		a.addClass('no-select');
-		a.addClass('card-link-icon');
+		img.addClass('card-link-icon');
 		a.attr('target','_blank');
 		a.append(img);
+		
 		ft.append(a);
 	}
-
-	// card.click(_ => {});
 
 	// let img = $('<img></img>')
 	// img.addClass('card-img-top');
@@ -102,11 +120,5 @@ function footicon(name,link,imgsrc) {
 	a.attr('target','_blank');
 	a.append(img);
 
-	a.mouseover(_ => {
-		a.addClass('test');
-	});
-	a.mouseleave(_ => {
-		a.removeClass('test');
-	});
 	return a;
 }

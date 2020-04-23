@@ -12,7 +12,7 @@
 	max-width:100%;
 	/*width: 20rem;*/
 	/*margin: 0 auto; */
-	float: none; /* Added */
+	float: none;
 }
 
 .card:hover {
@@ -32,19 +32,22 @@
 }
 
 .card-link-icon {
-	opacity:0.4;
+	/*opacity:0.4;*/
+	filter: opacity(40%);
+	-webkit-filter: opacity(40%);
 }
 
 .card-link-icon:hover {
-	opacity:1;
+	/*opacity:1;*/
+	filter: opacity(100%);
+	-webkit-filter: opacity(100%);
 	cursor:pointer;
 }
 
 .card-link-icon, .card-link-icon:hover {
-	transition: opacity 0.2s ease-out;
+	transition: filter 0.2s ease-out;
 }
 
-/* a glitch sometimes appears upon hover, this is to circumvent it */
-.card-footer {
-	background-color: #f7f7f7;
+.card, .card > div {
+	box-sizing: content-box;
 }
