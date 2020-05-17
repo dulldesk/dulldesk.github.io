@@ -5,6 +5,7 @@
     <title>Multi Language template</title>
     <link rel="icon" type="image/png" href="img/img4.png">
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/select-style.css">
     <link rel="stylesheet" type="text/css" href="css/articles-style.css">
     <link rel="stylesheet" type="text/css" href="vendor/prism/prism.css">
     <!-- <link href="https://myCDN.com/prism@v1.x/themes/prism.css" rel="stylesheet" /> -->
@@ -14,8 +15,7 @@
     <nav id='navbar'>
         <div class="menu-logo">
             <h1 class="header-title">dulldesk</h1>
-            <!-- <h1 class="menuham" onclick="$('.menubar').is(':visible') ? $('.menubar').slideUp() : ($('.menubar').slideDown() && $('.menubar').css('display','flex'))">≡</h1> -->
-            <h1 class="menuham" onclick="$('.menubar').is(':visible') ? $('.menubar').slideUp() : $('.menubar').slideDown()">≡</h1>
+            <h1 class="menuham">≡</h1>
         </div>
         <div class="menubar">
             <a href="index.html" class="menuitem">Home</a>
@@ -32,7 +32,38 @@
             </span>
         </div>
         <p>For loops are a fundamental part of programming.</p>
-        <p>This tutorial is available in several different programming languages, as their syntax varies. Select the ones you wish to see:</p>
+        <p class="italic">This tutorial is available in several different programming languages as the syntax for each may vary. Select the ones you wish to see (hold control to select multiple languages):</p>
+        <!-- mac: command? -->
+
+        <form class="multiselect" id="select-lang">
+            <div class="choice" id="select-lang-btn">
+                <label for="select">Language snippets</label>
+            </div>
+            <div class="options">
+                <div class="choice">
+                    <input id="java" type="checkbox" name="lang" checked/>
+                    <label for="java">Java</label>
+                </div>
+                <div class="choice">
+                    <input id="cpp" type="checkbox" name="lang" />
+                    <label for="cpp">C++</label>
+                </div>
+                <div class="choice">
+                    <input id="py" type="checkbox" name="lang" />
+                    <label for="py">Python</label>
+                </div>
+                <div class="choice">
+                    <input id="js" type="checkbox" name="lang" />
+                    <label for="js">JavaScript</label>
+                </div>
+                <div class="choice">
+                    <input id="posh" type="checkbox" name="lang" />
+                    <label for="posh">PowerShell</label>
+                </div>
+            </div>
+        </form>
+
+        <!-- 
         <div id="select-lang">
             <p class="label"><span>Select a language ▾</span></p>
             <button id="all">All</button>
@@ -41,7 +72,7 @@
             <button id="py">Python</button>
             <button id="js">JavaScript</button>
             <button id="posh">PowerShell</button>
-        </div>
+        </div> -->
 
         <h1>Components of a for loop</h1>
         <p>words words words words words words words words words words words </p>
@@ -52,7 +83,7 @@
                     for (int i=0; i<10; i++) {
                         // code
                     } 
-                    </code></pre>
+                </code></pre>
             </div>
             <div class='py'>
                 <p>In Python, ... </p>
@@ -75,25 +106,19 @@
                 <pre><code class="lang-powershell">
                     for ($i=0; $i -lt 10; $i++) {
                         # code
-                    } </code></pre>
+                    } 
+                </code></pre>
             </div>
         </div>
     </div>
-    <br>
-    <br>
+    <br />
+    <br />
 
+    <script src="js/base.js"></script>
     <script src="js/multi-lang.js"></script>
     <script src="vendor/prism/prism.js"></script>
     <!-- <script src="https://myCDN.com/prism@v1.x/components/prism-core.min.js"></script> -->
     <!-- <script src="https://myCDN.com/prism@v1.x/plugins/autoloader/prism-autoloader.min.js"></script> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.19.0/plugins/normalize-whitespace/prism-normalize-whitespace.min.js"></script>
-    <script>
-        $(document).ready(() => {
-            $(window).resize(() => {
-                if (window.innerWidth > 550) $('.menubar').css('display','flex');
-                else $('.menubar').hide();
-            });
-        });
-    </script>
 </body>
 </html>

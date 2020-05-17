@@ -8,6 +8,62 @@ var all = new Set();
 
 // change the colours
 $(document).ready(() => {
+	// langBtnSel();
+	$('#select-lang > *').addClass('no-select');
+
+	$('form').change(_ => {
+		$(".choice input:not(:checked)").each((ind,n) => {
+			$(`.${$(n).attr('id')}`).hide();
+			$(n).parent().css('background-color','var(--bkgd)');
+		});
+
+		$(".choice input:checked").each((ind,n) => {
+			$(`.${$(n).attr('id')}`).show();
+			$(n).parent().css('background-color','var(--lgt-green)');
+		});
+	});
+
+	$('.choice').click(e => {
+		$(e.currentTarget).children().each((ind,n) => {
+			if ($(n).prop('tagName').toLowerCase() == 'input') {
+				$(n).prop('checked',!($(n).prop('checked')));
+				$('#select-lang').change();
+				return;
+			}
+		})
+	});
+
+	$('form > :first-child').click((i,j) => $('form > *:not(:first-child)').toggle());
+
+	$('.options').hide();
+
+	$('#select-lang').change();
+	// default language
+	// $('#java').click();
+
+/*
+	$('#select-lang .label').click(() => {
+		$('#select-lang button').toggle();
+	});*/
+/*
+	$('body').click((e) => {
+	    if ($(e.target).closest('#select-lang').length === 0 && window.innerWidth <= 550) $('#select-lang button').hide();
+	});
+
+	$(window).resize(() => {
+		if (window.innerWidth > 550) $('#select-lang button').show();
+		else $('#select-lang button').hide();
+	});*/
+});
+
+function shouldHide(i) {
+	for (let c of i.classList) {
+		if (seen.has(c)) return false;
+	}
+	return true;
+}
+
+function langBtnSel() {
 	let btns = $('#select-lang');
 	$('#select-lang').children('button').each((toss,dombtn) => {
 		let btn = $(dombtn);
@@ -80,28 +136,4 @@ $(document).ready(() => {
 		btn.html(`&nbsp&nbsp${btn.text()}`);
 		btn.prepend(img);
 	});
-
-	// default language
-	$('#java').click();
-
-
-	$('#select-lang .label').click(() => {
-		$('#select-lang button').toggle();
-	});
-
-	$('body').click((e) => {
-	    if ($(e.target).closest('#select-lang').length === 0 && window.innerWidth <= 550) $('#select-lang button').hide();
-	});
-
-	$(window).resize(() => {
-		if (window.innerWidth > 550) $('#select-lang button').show();
-		else $('#select-lang button').hide();
-	});
-});
-
-function shouldHide(i) {
-	for (let c of i.classList) {
-		if (seen.has(c)) return false;
-	}
-	return true;
 }
