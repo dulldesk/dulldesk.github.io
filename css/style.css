@@ -61,7 +61,7 @@ body > :not(nav)  /*, body :not(nav > *) */{
 	/*font-weight: 600;*/
 }
 
-p, li, a, small {
+p, li, a, small, option, label {
 	font-family: 'Open Sans', sans-serif;
 	/*font-family: 'Lato', sans-serif;*/
 }
@@ -75,9 +75,9 @@ p {
 }
 
 a, a:visited {
-	text-decoration-line: none;
+	text-decoration: none;
 	color: black; /*change*/
-	transition: color 0.2s ease-out;
+	transition: all 0.2s ease-out;
 }
 
 a:hover {
@@ -88,6 +88,8 @@ a:hover {
 .intro, .title {
 	/*text-align: center;*/
 }
+
+/*title*/
 
 .title {
 	font-size:240%;
@@ -101,14 +103,11 @@ a:hover {
 	left:-10px; 
 }
 
-@media (max-width: 600px) {
+@media (max-width: 550px) {
 	.title {
 		font-size: 22vw;
 	}
 }
-
-
-/*title*/
 
 .title-cntr {
 	/*display:inline-block;*/
@@ -177,9 +176,11 @@ nav {
 nav, nav a:link, nav a:active, nav a:visited   {
 	color: var(--green);
 	/*font-size:120%;*/
+	text-decoration: none;
+	transition: all 0.2s ease-out;
 }
 
-nav a:hover   {
+nav a:hover {
 	color: var(--lgt-green);
 }
 
@@ -261,4 +262,9 @@ nav * {
 	-webkit-user-select: none;
 	-ms-user-select: none;
 	user-select: none;
+}
+
+
+.italic {
+	font-style: italic;
 }

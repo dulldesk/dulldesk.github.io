@@ -5,7 +5,7 @@ pre {
 .code-cntr {
 	/*margin-top:25px;*/
 }
-
+/*
 #select-lang .label {
 	display:none;
 	padding:7px;
@@ -41,8 +41,6 @@ pre {
 
 #select-lang {
 	display:block;
-	/*display:flex;*/
-	/*flex-direction: row;*/
 }
 
 .java, .cpp, .py, .js, .posh {
@@ -69,4 +67,4 @@ pre {
 		border:1px solid black;
 		border-width: 1px 0 0;
 	}
-}
+}*/
