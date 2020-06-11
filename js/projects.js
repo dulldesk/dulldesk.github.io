@@ -10,13 +10,13 @@ const work = {
 	"quick-notes" : {
 		"name" : "Quick Notes",
 		"caption" : "Browser extension to take short, quick notes",
-		"lang" : "JavaScript / JQuery, HTML, CSS",
+		"lang" : "JavaScript, JQuery, HTML, CSS",
 		"github" : "https://github.com/dulldesk/quick-notes"
 	},
 	"website" : {
 		"name" : "Personal Website",
 		"caption" : "My personal portfolio website",
-		"lang" : "HTML, CSS, JavaScript / JQuery",
+		"lang" : "HTML, CSS, JavaScript, JQuery",
 		"link" : "https://www.google.ca",
 		"short" : "google.ca"
 	},
@@ -25,6 +25,12 @@ const work = {
 		"caption" : "PowerShell script to schedule file deletions",
 		"lang" : "PowerShell",
 		"github" : "https://github.com/dulldesk/sched-file-del"
+	}, 
+	"cloak" : {
+		"name" : "Cloak",
+		"caption" : "An application platform that removes bias from the equation",
+		"lang" : "Django, HTML, CSS, Python",
+		"github" : "https://github.com/TheAvidDev/cloak"
 	}, 
 	// "gimmicks" : {
 	// 	"name" : "Small HTML Pages",
