@@ -1,12 +1,32 @@
-$(document).ready(_ => {
-	$('.menuham').click(_ => {
-		$('.menubar').is(':visible') ? $('.menubar').slideUp() : $('.menubar').slideDown();
+$(document).ready(() => {
+	$.when((() => {
+
+		$("body").prepend($("<nav id='navbar'></nav>") )
+	})()).done(() => {
+		$.get("nav.html",data => {
+			$.when((() => {
+				$('#navbar').html(data);
+			})()).done(() => {
+				$('.menuham').click(() => {
+					$('.menubar').is(':visible') ? $('.menubar').slideUp() : $('.menubar').slideDown();
+				});
+
+				$(window).resize(() => {
+					if ($(window).width() > 550) {
+						$('.menubar').show();
+						$('.menubar').css('display','flex');
+					} else $('.menubar').hide();
+				});
+			});
+		});
+
 	});
 
-	$(window).resize(_ => {
-		if ($(window).width() > 550) {
-			$('.menubar').show();
-			$('.menubar').css('display','flex');
-		} else $('.menubar').hide();
-	});
+	$.when((() => {
+		$("body").append($("<footer id='footer'></footer>") )
+	})()).done(() => {
+		$.get("footer.html",data => {
+			$('#footer').html(data);
+		});
+	})
 });
