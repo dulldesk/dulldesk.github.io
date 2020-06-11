@@ -19,7 +19,7 @@ $(document).ready(() => {
 
 		$(".choice input:checked").each((ind,n) => {
 			$(`.${$(n).attr('id')}`).show();
-			$(n).parent().css('background-color','var(--lgt-green)');
+			$(n).parent().css('background-color','var(--secondary)');
 		});
 	});
 
