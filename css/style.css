@@ -164,8 +164,7 @@ a.ignore:hover::before {
 	position:relative; 
 	/*top:-20px;*/
 	/*top:-50px;*/
-	opacity: 0.7;
-	border-color: var(--main);
+	/*opacity: 0.7;*/
 	background-color: var(--main);
 	/*width: 62%;*/
 	/*width:80%;*/
@@ -173,6 +172,7 @@ a.ignore:hover::before {
 	height: 5px;
 	/*margin: 0 auto;*/
 	margin: 0;
+	border: 1px solid var(--main);
 }
 
 
