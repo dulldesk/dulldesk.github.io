@@ -127,9 +127,9 @@ for (let key in work) {
 	bd.append(title,cap,lang);
 	// ft.append(lang);
 
-	card.append(bd);
-	if (!node.ongoing) card.append($("<hr>"),ft);
-	// card.append(bd,ft);
+	// card.append(bd);
+	// if (!node.ongoing) card.append($("<hr>"),ft);
+	card.append(bd,ft);
 
 	cntr.append(card);
 }
