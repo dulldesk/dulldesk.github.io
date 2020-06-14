@@ -369,6 +369,6 @@ footer > * {
 }
 
 
-p + ol, p + ul, h2 + ol, h2 + ul {
+p + ol, p + ul, h2 + ol, h2 + ul, .list {
 	margin-top: -0.5em;
 }

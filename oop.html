@@ -127,7 +127,7 @@
 		<p>This method call will grow a leaf on <code>myTree</code>. Note that <code>yourTree</code> will be unaffected as the method is called on <code>myTree</code>.</p>
 
 		<h2 id="encapsulation">Encapsulation</h2>
-		<p>Encapsulation refers to the concept of "hiding" data. For OOP, it is used to restrict the accessibility of data (i.e. attributes), e.g. to prevent unwanted changes to them.</p>
+		<p>Encapsulation refers to the concept of "hiding" data. For OOP, it is used to restrict the accessibility of data (i.e. attributes) from outside sources, e.g. to prevent unwanted and potentially program-crashing changes to them.</p>
 		<p>Encapsulation is accomplished via <b>access modifiers</b> (also known as access specifiers). These are keywords that are used to specify how / "who" can access or use a certain attribute, method, class, etc.</p>
 		<small><i>If no access modifier is specified, then the data is considered to be "package-private".<sup id="cite-1"><a href="#src-1">1</a></sup></i></small>
 		<p>Below is a table of Java access modifiers:</p>
@@ -184,7 +184,7 @@
 
 					// Accessor method
 					public int getNumberOfLeaves() {
-						return numberOfLeaves();
+						return numberOfLeaves;
 					}
 
 					// Mutator method
@@ -217,10 +217,62 @@
 				Set # of leaves: 12
 			</code></pre>
 		</div>
+		<p>Here is the complete code of the <code>Tree</code> class.</p>
+		<div class='code-cntr'>
+			<pre><code class="lang-java">
+				public class Tree {
+					private int numberOfLeaves;
+					private String species;
 
+					public Tree() {
+						numberOfLeaves = 0;
+						species = "maple";
+					}
+
+					Tree(String species, int numberOfLeaves) {
+						this.numberOfLeaves = numberOfLeaves;
+						this.species = species;
+					}
+
+					public void growALeaf() {
+						numberOfLeaves++;
+					}
+
+					public int getNumberOfLeaves() {
+						return numberOfLeaves;
+					}
+
+					public void setNumberOfLeaves(int leaves) {
+						numberOfLeaves = leaves;
+					}
+
+					public int getSpecies() {
+						return species;
+					}
+
+					public void setSpecies(String species) {
+						this.species = species;
+					}
+
+					// Driver
+					public static void main(String [] args) {
+						Tree myTree = new Tree();
+						Tree yourTree = new Tree("oak",100);
+
+						System.out.println("Original # of leaves: "+myTree.getNumberOfLeaves());
+
+						myTree.growALeaf();
+						System.out.println("Grew a leaf: "+myTree.getNumberOfLeaves());
+
+						myTree.setNumberOfLeaves(12);
+						System.out.println("Set # of leaves: "+myTree.getNumberOfLeaves());
+					}
+				}
+			</code></pre>
+		</div>
+		<h2>Sources</h2>
 		<small>
-			<p>Sources</p>
-			<ol>
+			<ol class="list">
 				<li id="src-1"><a href="https://docs.oracle.com/javase/tutorial/java/javaOO/accesscontrol.html">https://docs.oracle.com/javase/tutorial/java/javaOO/accesscontrol.html</a> <sup><a href="#cite-1">^</a></sup></li>
 			</ol>
 		</small>
