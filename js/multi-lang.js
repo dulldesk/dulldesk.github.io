@@ -4,11 +4,9 @@ const selcol = "rgb(225, 255, 225)"; // selected button colour
 
 var seen = new Set();
 var all = new Set();
-// var seenall = new Set();
 
 // change the colours
 $(document).ready(() => {
-	// langBtnSel();
 	$('#select-lang > *').addClass('no-select');
 
 	$('form').change(_ => {
@@ -41,19 +39,6 @@ $(document).ready(() => {
 	// default language
 	// $('#java').click();
 
-/*
-	$('#select-lang .label').click(() => {
-		$('#select-lang button').toggle();
-	});*/
-/*
-	$('body').click((e) => {
-	    if ($(e.target).closest('#select-lang').length === 0 && window.innerWidth <= 550) $('#select-lang button').hide();
-	});
-
-	$(window).resize(() => {
-		if (window.innerWidth > 550) $('#select-lang button').show();
-		else $('#select-lang button').hide();
-	});*/
 });
 
 function shouldHide(i) {

@@ -1,17 +1,8 @@
-
-
 .card {
-	/*padding:20px;*/
-	/*margin-top:5px;*/
-	/*margin-left:auto;*/
-	/*margin-right:auto;*/
 	margin:5px auto;
 	margin: 5px auto 10px;
-	/*margin-bottom: 10px; */
 
 	max-width:100%;
-	/*width: 20rem;*/
-	/*margin: 0 auto; */
 	float: none;
 }
 
@@ -27,22 +18,12 @@
 	font-weight: 300;
 }
 
-#node-cntr {
-	/*margin: 0 auto;*/
-	/*width:90%;*/
-	/*margin:auto;*/
-	/*margin: 0 5%;*/
-	/*padding: 0;*/
-}
-
 .card-link-icon {
-	/*opacity:0.4;*/
 	filter: opacity(40%);
 	-webkit-filter: opacity(40%);
 }
 
 .card-link-icon:hover {
-	/*opacity:1;*/
 	filter: opacity(100%);
 	-webkit-filter: opacity(100%);
 	cursor:pointer;
