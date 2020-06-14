@@ -17,8 +17,9 @@ const work = {
 		"name" : "Personal Website",
 		"caption" : "My personal portfolio website",
 		"lang" : "HTML, CSS, JavaScript, JQuery",
-		"link" : "https://www.google.ca",
-		"short" : "google.ca"
+		"link" : "https://dulldesk.github.io",
+		"github" : "https://github.com/dulldesk.github.io",
+		"short" : "dulldesk.github.io"
 	},
 	"sched-del" : {
 		"name" : "Scheduled File Deleter",
@@ -26,34 +27,50 @@ const work = {
 		"lang" : "PowerShell",
 		"github" : "https://github.com/dulldesk/sched-file-del"
 	}, 
-	"cloak" : {
-		"name" : "Cloak",
-		"caption" : "An application platform that removes bias from the equation",
-		"lang" : "Django, HTML, CSS, Python",
-		"github" : "https://github.com/TheAvidDev/cloak"
-	}, 
-	// "gimmicks" : {
-	// 	"name" : "Small HTML Pages",
-	// 	"caption" : "A series of small, interactive HTML pages",
-	// 	"lang" : "HTML, CSS, JavaScript",
-	// 	"more" : [
-	// 		[{
-	// 			"link" : "https://www.google.ca",
-	// 			"text" : ""
-	// 		}, {
-	// 			"link" : "https://www.google.ca",
-
-	// 		}, {
-	// 			"link" : "https://www.google.ca",
-
-	// 		}]
-	// 	]
-	// },
 	"recycle" : {
 		"name" : "Recycle Bin Size Script",
 		"caption" : "A small script to check one's recycle bin size",
 		"lang" : "PowerShell",
 		"gist" : "https://gist.github.com/dulldesk/4529497dd9f10c8f68d7d4dd4cf9599a"
+	}, 
+	"covid-cashier" : {
+		"name" : "COVID Cashier",
+		"caption" : "A game to inform on safe restaurant cashiering workplace during a pandemic",
+		"lang" : "Java",
+		"github" : "https://github.com/dulldesk/covid-cashier"
+	},
+	"chords" : {
+		"name" : "Chords",
+		"caption" : "A small site with an online piano. Play, save, and share chords.",
+		"lang" : "HTML, CSS, JavaScript, JQuery",
+		"github" : "https://github.com/dulldesk/chords",
+		"link" : "https://dulldesk.github.io/chords",
+		"ongoing" : true
+	},
+	"calendar" : {
+		"name" : "Calendar Phone Background Generator",
+		"caption" : "A Processing application to generate a calendar background for a smartphone",
+		"lang" : "Processing",
+		"github" : "https://github.com/dulldesk/calendar",
+		"ongoing" : true
+	},
+	"quicksort" : {
+		"name" : "Quicksort Demo",
+		"caption" : "A Processing to demonstrate the quicksort algorithm",
+		"lang" : "Processing",
+		"github" : "https://github.com/dulldesk/quicksort-demo"
+	},
+	"twitter" : {
+		"name" : "TTC Twitter Bot",
+		"caption" : "A Twitter bot to filter and private message subscribing users TTC service tweets relevant to their routes",
+		"lang" : "JavaScript",
+		"ongoing" : true
+	},
+	"collage" : {
+		"name" : "Collage Generator",
+		"caption" : "A collage generator site. Upload an image and a collage will be created. Inspired by an AP Computer Science Student Lab.",
+		"lang" : "HTML, CSS, JavaScript",
+		"ongoing" : true
 	}
 }
 
@@ -71,13 +88,14 @@ for (let key in work) {
 	let bd = $('<div></div>').addClass('card-body');
 	let ft = $('<div></div>').addClass('card-footer');
 
-	let title = $('<h2></h2>').text(node.name).addClass('card-title');
+	let title = $('<h2></h2>').text(`${node.name + (node.ongoing ? ' ⚗' : '')}`).addClass('card-title');
 	let cap = $('<p></p>').text(node.caption).addClass('card-text');
 
 	let langP = $('<p></p>').addClass('card-text');
 	let lang = $('<small></small>').text(node.lang).addClass('text-muted');
 	langP.append(lang);
 
+	let hasLink = false;
 	if (node.hasOwnProperty('github')) {
 		ft.append(footicon('GitHub',node.github,icons.github));
 	}
@@ -90,10 +108,12 @@ for (let key in work) {
 
 		img.text("< />");
 		img.attr('title',`Go to ${node.short}`);
+		img.addClass('ignore');
 		// img.attr('alt','link');
 		a.attr('href',node.link);
 
 		a.addClass('no-select');
+		a.addClass('ignore');
 		img.addClass('card-link-icon');
 		a.attr('target','_blank');
 		a.append(img);
@@ -106,7 +126,10 @@ for (let key in work) {
 	// card.append(img);
 	bd.append(title,cap,lang);
 	// ft.append(lang);
-	card.append(bd,ft);
+
+	card.append(bd);
+	if (!node.ongoing) card.append($("<hr>"),ft);
+	// card.append(bd,ft);
 
 	cntr.append(card);
 }
@@ -122,6 +145,7 @@ function footicon(name,link,imgsrc) {
 
 	img.attr('draggable','false');
 	img.addClass('card-link-icon');
+	a.addClass('ignore');
 	a.addClass('no-select');
 	a.attr('target','_blank');
 	a.append(img);

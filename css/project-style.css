@@ -55,3 +55,24 @@
 .card, .card > div {
 	box-sizing: content-box;
 }
+
+.card-footer {
+	display:flex;
+	align-items: center;
+
+	/* override footer css */
+	background-color: #fff;
+	border-top: none;
+	padding-top: 0;
+}
+
+.card-footer > * {
+	margin-right: 10px;
+}
+
+.card > hr, .card-body + hr {
+	margin-left: 20px;
+	margin-right: 20px;
+	margin-bottom: 15px;
+	margin-top: 0;
+}
