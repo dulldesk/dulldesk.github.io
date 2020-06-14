@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+	<link rel="icon" type="image/png" href="img/favicon-01.png">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<title>Searching & Sorting | dulldesk</title>
+	<link rel="stylesheet" type="text/css" href="css/articles-style.css">
+	<link rel="stylesheet" type="text/css" href="vendor/prism/prism.css">
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+</head>
+<body>
+	<!-- <nav id='navbar'> </nav> -->
+	<div class="cntr">
+		<div class="title-cntr">
+			<span>
+				<h1 class="title">Searching & Sorting</h1>
+				<hr />
+			</span>
+		</div>
+		<p>Searching and sorting are critical algorithms for processing array data and the like in computer programming.</p>
+		<p><a href="#searching">Searching</a> refers to finding an element in an array or array-like structure. <a href="#sorting">Sorting</a> refers to sorting an array or array-like structure.</p>
+
+		<h2 id="searching">Searching</h2>
+		<p>There are several different algorithms for searching an element. I have listed some as well as their time complexities below.</p>
+		<div class="tablewrapper">
+			<table>
+				<tr>
+					<td>Algorithm</td>
+					<td>Time Complexity</td>
+				</tr>
+				<tr>
+					<td><a href="#sequential-search">Sequential Search</a></td>
+					<td>O(n)</td>
+				</tr>
+				<tr>
+					<td><a href="#binary-search">Binary Search</a></td>
+					<td>O(logn)</td>
+				</tr>
+			</table>
+		</div>
+
+		<h3 id="sequential-search">Sequential Search</h3>
+		<p>The concept of sequential search is very simple: iterate through the array from its first to last index (length of the array - 1). When the desired value has been found, return it and end the search. </p>
+
+		 <div class='code-cntr'>
+			<pre><code class="lang-java">
+				/**
+				  * Sequential search
+				  * @param target the value to be found
+				  * @param arr the array to search in
+				  * @return the index of the first occurence of the target value, or -1 if not found
+				  */
+				public static int sequentialSearch(int target, int[] arr) {
+					for (int index = 0; index < arr.length; index++) {
+						if (arr[index] == target) {
+							return index;
+						}
+					}
+					// the method will only reach this line if the target value has not been found
+					return -1; 
+				}
+			</code></pre>
+		</div>
+
+		<h3 id="binary-search">Binary Search</h3>
+		<p>Binary search is a divide and conquer algorithm and requires a sorted array.</p>
+		<p>This algorithm requires two pointers (a left and right pointer). The left pointer points at a smaller index of the array than the right pointer. </p>
+		<p>Suppose you have the following array and you want to find the position of the value <code>5</code>. </p>
+        <p>We will set the index of the left pointer to <code>0</code> and the index of the right pointer to the length of the array minus 1 (the other end of the array; <code>6</code>).</p>
+        <div class="tablewrapper">
+            <table>
+                <tr>
+                    <td class="first-col">Index</td>
+                    <td>0</td> <td>1</td> <td>2</td> <td>3</td> <td>4</td> <td>5</td> <td>6</td>
+                </tr>
+                <tr>
+                    <td class="first-col">Value</td>
+                    <td class="red-shade">1</td> <td>3</td> <td>5</td> <td>7</td> <td>9</td> <td>11</td> <td class="blue-shade">13</td>
+                </tr>
+            </table>
+        </div>
+		<small><i>The index of the left pointer is shaded red; the index of the right pointer is shaded blue.</i></small>
+		<p>Then, we will check if the middle index in between these two pointers is larger, smaller, or equal to the target value.</p>
+        <div class="tablewrapper">
+            <table>
+                <tr>
+                    <td class="first-col">Index</td>
+                    <td>0</td> <td>1</td> <td>2</td> <td>3</td> <td>4</td> <td>5</td> <td>6</td>
+                </tr>
+                <tr>
+                    <td class="first-col">Value</td>
+                    <td class="red-shade">1</td> <td>3</td> <td>5</td> <td class="green-shade">7</td> <td>9</td> <td>11</td> <td class="blue-shade">13</td>
+                </tr>
+            </table>
+        </div>
+		<small><i>The middle index is shaded green.</i></small>
+
+		<p>Because the target value (<code>5</code>) is less than the middle value, we will move the right pointer to the middle index minus 1. Note that no value less than or equal to the target is right of the right pointer.</p>
+        <div class="tablewrapper">
+            <table>
+                <tr>
+                    <td class="first-col">Index</td>
+                    <td>0</td> <td>1</td> <td>2</td> <td>3</td> <td>4</td> <td>5</td> <td>6</td>
+                </tr>
+                <tr>
+                    <td class="first-col">Value</td>
+                    <td class="red-shade">1</td> <td>3</td> <td class="blue-shade">5</td> <td>7</td> <td>9</td> <td>11</td> <td>13</td>
+                </tr>
+            </table>
+        </div>
+
+        <p>Finding the middle index again:</p>
+        <div class="tablewrapper">
+            <table>
+                <tr>
+                    <td class="first-col">Index</td>
+                    <td>0</td> <td>1</td> <td>2</td> <td>3</td> <td>4</td> <td>5</td> <td>6</td>
+                </tr>
+                <tr>
+                    <td class="first-col">Value</td>
+                    <td class="red-shade">1</td> <td class="green-shade">3</td> <td class="blue-shade">5</td> <td>7</td> <td>9</td> <td>11</td> <td>13</td>
+                </tr>
+            </table>
+        </div>
+        <p>The target value (<code>5</code>) is greater than the value at the middle index (<code>3</code>). We will move the left pointer to the middle index plus 1.</p>
+        <div class="tablewrapper">
+            <table>
+                <tr>
+                    <td class="first-col">Index</td>
+                    <td>0</td> <td>1</td> <td>2</td> <td>3</td> <td>4</td> <td>5</td> <td>6</td>
+                </tr>
+                <tr>
+                    <td class="first-col">Value</td>
+                    <td>1</td> <td>3</td> <td class="red-shade blue-shade">5</td> <td>7</td> <td>9</td> <td>11</td> <td>13</td>
+                </tr>
+            </table>
+        </div>
+		<small><i>The left and right pointers share the same index.</i></small>
+
+        <p>Finding the middle index:</p>
+        <div class="tablewrapper">
+            <table>
+                <tr>
+                    <td class="first-col">Index</td>
+                    <td>0</td> <td>1</td> <td>2</td> <td>3</td> <td>4</td> <td>5</td> <td>6</td>
+                </tr>
+                <tr>
+                    <td class="first-col">Value</td>
+                    <td>1</td> <td>3</td> <td class="red-shade green-shade blue-shade">5</td> <td>7</td> <td>9</td> <td>11</td> <td>13</td>
+                </tr>
+            </table>
+        </div>
+		<small><i>The middle index is the same as the indices of the left and right pointers.</i></small>
+        
+        <p>The target value (<code>5</code>) is located at this middle index (<code>2</code>), which the algorithm will return.</p>
+        <div class="tablewrapper">
+            <table>
+                <tr>
+                    <td>Target value</td>
+                    <td>Index of the target value</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>2</td>
+                </tr>
+            </table>
+        </div>
+
+        <p>Below is the code for the binary search algorithm.</p>
+
+		<div class='code-cntr'>
+			<pre><code class="lang-java">
+				/**
+				  * Binary search
+				  * Precondition: the array is sorted
+				  * @param target the value to be found
+				  * @param arr the array to search in
+				  * @return the index of the first occurence of the target value, or -1 if not found
+				  */
+				public static int binarySearch(int target, int[] arr) {
+					int leftPtr = 0;
+					int rightPtr = arr.length - 1;
+
+					while (leftPtr <= rightPtr) {
+						int midPtr = (leftPtr + rightPtr) / 2;
+						
+						if (arr[midPtr] < target) {
+							leftPtr = midPtr + 1;
+						} else if (arr[midPtr] < target) {
+							rightPtr = midPtr - 1;
+						} else {
+							// arr[midPtr] == target; the target value has been found
+							return midPtr;
+						}
+					}
+
+					// the method will only reach this line if the target value has not been found
+					return -1; 
+				}
+			</code></pre>
+		</div>
+
+		<h2 id="sorting">Sorting</h2>
+		<p>Several algorithms exist for sorting an array of values. I will be discussing one of these algorithms in depth - quicksort. Its time complexity is listed below:</p>
+		<div class="tablewrapper">
+			<table>
+				<tr>
+					<td>Algorithm</td>
+					<td>Time Complexity</td>
+				</tr>
+				<tr>
+					<td><a href="#insertion-sort">Insertion Sort</a></td>
+					<td>O(nlogn)</td>
+				</tr>
+				<tr>
+					<td><a href="#quicksort">Quicksort</a></td>
+					<td>O(n<sup>2</sup>)</td>
+				</tr>
+			</table>
+		</div>
+		<p><b>DISCLAIMER</b>: the code for each of the sorts below uses a method called swap(). Below is the code signature for said method.</p> 
+		<div class='code-cntr'>
+			<pre><code class="lang-java">
+				/**
+				  * Swaps the values at two indices of a given array
+				  * @param a one of the two indices to swap
+				  * @param b one of the two indices to swap
+				  * @param arr the array whose elements are to be swapped
+				  */
+				public static void swap(int a, int b, int[] arr);
+			</code></pre>
+		</div>
+
+		<h3 id="insertion-sort">Insertion Sort</h3>
+		<p>Insertion sort is a simple, albeit inefficient, sorting algorithm that considers the placement of each  element in a sorted subarray.</p>
+		<p>Unlike the searches above, I will provide the code first.</p>
+		<div class='code-cntr'>
+			<pre><code class="lang-java">
+				/**
+				  * Insertion sort
+				  * @param arr the array to be sorted
+				  */
+				public static void insertionSort(int[] arr) {
+					for (int i = 1; i < arr.length; i++) {
+						for (int j = i; j > 0 && arr[j] <  arr[j-1]; j--) {
+							swap(j - 1, j, arr);
+						}
+					}
+				}
+			</code></pre>
+		</div>
+		<p>The integer <code>i</code> is the index of the array where indices <code>0</code> to <code>i - 1</code> in the array are already sorted. I shalll refer to this subarray as "the sorted subarray".</p>
+		<p>The element at index <code>i</code> prior to the execution of the inner for loop is the element that is being inserted into the sorted subarray in that iteration of the outer loop. I shall refer to this element as "the element to be inserted".</p>
+		<p>The integer <code>j</code> is the index of the array that the element to be inserted into the sorted subarray is currently located. </p>
+		<p>The inner for loop starts at the index of the element to be inserted (<code>i</code>). It checks each element of the sorted subarray, from right to left, and inserts the element (breaks the loop) once the elements to the left of <code>j</code> are less than the element to be inserted.</p>
+
+		<p>Below is a demonstration on how insertion sort works.</p>
+		<div id="insertion-example">
+			<img src="https://upload.wikimedia.org/wikipedia/commons/0/0f/Insertion-sort-example-300px.gif" alt="Insertion Sort Example">
+			<br>
+			<small><i>Source: user Swfung8 <a href="https://en.wikipedia.org/wiki/File:Insertion-sort-example-300px.gif">on Wikipedia</a>.</i></small>
+		</div>
+
+		<h3 id="quicksort">Quicksort</h3>
+		<p>The quicksort is a divide and conquer algorithm. Below are the steps that a quicksort algorithm takes:</p>
+		<p>Take an array of integers.</p>
+		<ol>
+			<li>Choose a pivot, such as the last element of the array.</li>
+			<li>Let p be the element at the pivot index. Partition (or arrange) the array such that all
+			elements that are less than or equal to p are located at indices less than the pivot index
+			(or to its left), and that all elements that are that are greater than or equal to p are
+			located at indices greater than the pivot index (to its right).</li>
+			<li>Sort the subarrays to the left and to the right of the pivot. This is performed by repeating
+			steps 1 and 2, except the to-be-partitioned range is limited as aforementioned. The pivot
+			must also be in this range.</li>
+		</ol>
+
+		<p>Below is the code for the quicksort:</p>
+		<div class='code-cntr'>
+			<pre><code class="lang-java">
+				/**
+				  * Quicksort
+				  * @param L the leftmost index to be iterated through in this call
+				  * @param R the rightmost index to be iterated through in this call
+				  * @param arr the array to be processed
+				  */
+				public static void quickSort(int L, int R, int arr[]) {
+					if (L >= R) return;
+
+					// value at the pivot of the call
+					int pivotValue = arr[r];
+					int l = L;
+					int r = R - 1;
+					while (true) {
+						while (arr[l] <= pivotValue && l <= r && l < arr.length - 1) 
+							l++;
+						while (pivotValue <= arr[r] && l <= r && r > 0) 
+							r--;
+						if (l >= r) break;
+						else swap(l, r, arr);
+					}
+					swap(l, R, arr);
+
+					int pivot = l;
+					quickSort(L, pivot - 1, arr);
+					quickSort(pivot + 1, R, arr);
+				}
+
+				// An integer array named "arr" should be declared and initialized
+				// Initial call
+				quickSort(0, arr.length-1, arr);
+			</code></pre>
+		</div>
+		<p>The quicksort has several optimizations available:</p>
+		<ol>
+			<li><b>The Median of 3</b></li>
+			<p>If a pivot consistently chooses the smallest or largest values among the elements that have not been chosen as pivots yet, then the partitions would split the array into subarrays of size <code>0</code> and <code>n - 1</code> (where <code>n</code> is the length of the array), which then splits it into <code>0</code> and <code>n - 2</code>, and so on.</p>
+			<p>The best pivots are the median of the array's elements; this makes the sorting process more efficient. However, to find this with each partition is too costly in operations. One way to mitigate this is to choose the <b>median pivot</b> from either the <b>first, last, or middle indices</b> of a subarray. This way, the subarray will not be skewed as poorly as stated above.</p>
+			
+			<li><b>The Recursion Stack</b></li>
+			<p>Too many (recursive) method calls may result in a stack overflow. By <b>sorting the shorter subarray first</b>, the method call associated with said subarray is finished sooner and thus clears some memory for use by another call. This reduces overall memory used for the sort.</p>
+			<p>To accomplish this, check the range of elements being checked and use conditionals to decide which subarray call to make first.</p>
+		</ol>
+		<p>A demonstration of the quicksort written in Processing is available on <a href="https://github.com/dulldesk/quicksort-demo">my GitHub</a>.</p>
+	</div>
+	<br />
+
+	<!-- <footer id="footer"></footer> -->
+	<script src="js/base.js"></script>
+	<script src="vendor/prism/prism.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.19.0/plugins/normalize-whitespace/prism-normalize-whitespace.min.js"></script>
+</body>
+</html>

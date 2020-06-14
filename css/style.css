@@ -82,6 +82,10 @@ p {
 	line-height: 150%;
 }
 
+p.more-space {
+	line-height: 200%;
+}
+
 a, a:visited {
 	text-decoration: none;
 	color: var(--main); 
@@ -238,7 +242,7 @@ nav a:hover {
 	flex-direction: inherit;
 	display: flex;
 	justify-content: inherit; /*space-between;*/
-	min-width: 300px;
+	/*min-width: 300px;*/
 	/*font-weight:600;*/
 }
 
@@ -247,6 +251,7 @@ nav a:hover {
 	display: inline-flex;
 	color:inherit;
 	font-family: 'Open Sans', sans-serif;
+	margin-left: 20px;
 }
 
 .menuham {
@@ -276,11 +281,13 @@ nav * {
 	}
 
 	.menubar {
-		/*align-items: center;*/
+		align-items: center;
 		display:none;
 		flex-direction:row;
 		flex-wrap:wrap;
-		/*text-align:center;*/
+		text-align:center;
+		justify-content:center;
+		padding-bottom: 10px !important;
 	}
 
 	.menuitem {
@@ -288,6 +295,7 @@ nav * {
 		width:49%;
 		/*flex: 50%;*/
 		justify-content:center;
+		margin-left: 0;
 	}
 
 	.header-title {
@@ -335,7 +343,7 @@ footer, #footer {
 	flex-direction: row;
 	align-items: center;
 	justify-content: space-around;
-	border-top: 3px solid var(--secondary);
+	border-top: 3px solid #a3939a;
 	position: absolute;
 	bottom:0;
 	background-color: var(--bkgd);
@@ -344,7 +352,7 @@ footer, #footer {
 
 footer > * {
 	display: flex;
-	color: var(--secondary);
+	color: var(--main);
 	opacity: 0.7;
 }
 
@@ -358,4 +366,9 @@ footer > * {
 .github-logo:hover {
 	opacity: 1;
 	transition: opacity 0.7s ease-out;
+}
+
+
+p + ol, p + ul, h2 + ol, h2 + ul {
+	margin-top: -0.5em;
 }
