@@ -45,6 +45,7 @@ const work = {
 		"lang" : "HTML, CSS, JavaScript, JQuery",
 		"github" : "https://github.com/dulldesk/chords",
 		"link" : "https://dulldesk.github.io/chords",
+		"short" : "dulldesk.github.io/chords",
 		"ongoing" : true
 	},
 	"calendar" : {
