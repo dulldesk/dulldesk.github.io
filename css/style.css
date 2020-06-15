@@ -4,14 +4,19 @@
 :root {
 	/* primary */
 	--main: #5d414d;
+	/*--main2: #8d570f;*/
 
 	/* secondary */
-	--secondary: #7e858b;
+	/*--secondary: #7e858b;*/
 
-	--lgt-main: #ccedd2;
-	/*tbd*/
+	--lgt-main: #a3939a;
+
 	/* background */
 	--bkgd: #fafafa;
+
+	--text: black;
+	--link: #7d0000;
+	--hover: #5d414d;
 }
 
 html {
@@ -63,6 +68,7 @@ h2 {
 
 p, li, small, option, label, td, footer {
 	font-family: 'Open Sans', sans-serif;
+	color: var(--text);
 }
 
 li {
@@ -79,12 +85,17 @@ p.more-space {
 
 a, a:visited {
 	text-decoration: none;
-	color: var(--main); 
-	transition: all 0.2s ease-out;
+	color: var(--link); 
+	transition: color 0.15s ease-out;
 	position:relative;
 }
 
-a::before {
+a.menuitem, a.menuitem:visited {
+	transition: all 0.1s ease-out;
+	color: var(--main); 
+}
+
+a.menuitem::before {
 	content: "";
 	position: absolute;
 	width:100%;
@@ -95,16 +106,21 @@ a::before {
 	transition: transform 0.1s ease-out;
 }
 
-a:hover::before {
+a.menuitem:hover::before {
 	transform: scaleX(1);
 }
 
-a.ignore::before {
+a.menuitem.ignore::before {
 	transition: none;
 }
 
-a.ignore:hover::before {
+a.menuitem.ignore:hover::before {
 	transform: scaleX(0);
+}
+
+a:hover {
+	color: var(--hover); 
+	transition: color 0.15s ease-out;
 }
 
 /*title*/
@@ -274,7 +290,7 @@ footer, #footer {
 	flex-direction: row;
 	align-items: center;
 	justify-content: space-around;
-	border-top: 3px solid #a3939a;
+	border-top: 3px solid var(--lgt-main);
 	position: absolute;
 	bottom:0;
 	background-color: var(--bkgd);
@@ -289,12 +305,12 @@ footer > * {
 .github-logo {
 	opacity: 0.5;
 	width: 20px;
-	transition: opacity 0.7s ease-out;
+	transition: opacity 0.5s ease-out;
 }
 
 .github-logo:hover {
 	opacity: 1;
-	transition: opacity 0.7s ease-out;
+	transition: opacity 0.5s ease-out;
 }
 
 p + ol, p + ul, h2 + ol, h2 + ul, .list {
