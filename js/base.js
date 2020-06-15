@@ -8,7 +8,8 @@ $(document).ready(() => {
 				$('#navbar').html(data);
 			})()).done(() => {
 				$('.menuham').click(() => {
-					$('.menubar').is(':visible') ? $('.menubar').slideUp() : $('.menubar').slideDown();
+					// $('.menubar').is(':visible') ? $('.menubar').slideUp() : $('.menubar').slideDown();
+					slideToggle('.menubar');
 				});
 
 				$(window).resize(() => {
@@ -30,3 +31,7 @@ $(document).ready(() => {
 		});
 	})
 });
+
+function slideToggle(id) {
+	$(id).is(':visible') ? $(id).slideUp() : $(id).slideDown();
+}
