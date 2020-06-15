@@ -3,20 +3,24 @@
 /*colour variables*/
 :root {
 	/* primary */
-	--main: #5d414d;
+	--main: #694d45;
 	/*--main2: #8d570f;*/
 
 	/* secondary */
 	/*--secondary: #7e858b;*/
 
-	--lgt-main: #a3939a;
+	--lgt-main: #b59162;
+    --alt-main: #e8a041;
 
 	/* background */
 	--bkgd: #fafafa;
 
-	--text: black;
-	--link: #7d0000;
+	--text: var(--lgt-main);
+	--link: var(--lgt-main);
 	--hover: #5d414d;
+    
+    --gry: #636261;
+    --lgt-gry: #dbd4cc;
 }
 
 html {
@@ -63,20 +67,26 @@ body > *:not(nav), body > *:not(footer) {
 }
 
 h2 {
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 300;
 	font-weight:600;
+    color: black;
 }
 
-p, li, small, option, label, td, footer {
+li, small, option, label, td, footer {
 	font-family: 'Open Sans', sans-serif;
 	color: var(--text);
 }
 
 li {
 	line-height: 210%;
+    color: var(--gry);
 }
 
 p {
+    font-family: 'Open Sans', sans-serif;
 	line-height: 150%;
+    color: var(--main);
 }
 
 p.more-space {
@@ -153,11 +163,11 @@ a:hover {
 
 .title-cntr hr {
 	position:relative; 
-	background-color: var(--main);
+	background-color: var(--lgt-gry);
 	max-width: 200px;
 	height: 5px;
 	margin: 0;
-	border: 1px solid var(--main);
+	border: 1px solid var(--lgt-gry);
 }
 
 
@@ -290,10 +300,10 @@ footer, #footer {
 	flex-direction: row;
 	align-items: center;
 	justify-content: space-around;
-	border-top: 3px solid var(--lgt-main);
+/*    border-top: 3px solid var(--lgt-main);*/
 	position: absolute;
 	bottom:0;
-	background-color: var(--bkgd);
+	background-color: var(--lgt-gry);
 }
 
 footer > * {
