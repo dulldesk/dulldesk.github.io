@@ -18,15 +18,22 @@
 	font-weight: 300;
 }
 
-.card-link-icon {
+img.card-link-icon {
 	filter: opacity(40%);
 	-webkit-filter: opacity(40%);
+}
+
+.card-link-icon {
+	filter: opacity(80%);
+	-webkit-filter: opacity(80%);
+	color: grey;
 }
 
 .card-link-icon:hover {
 	filter: opacity(100%);
 	-webkit-filter: opacity(100%);
 	cursor:pointer;
+	color: black;
 }
 
 .card-link-icon, .card-link-icon:hover {
