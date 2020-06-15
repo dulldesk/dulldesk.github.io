@@ -41,7 +41,7 @@
 		</div>
 		<small><i>In Java, class names should be capitalized.</i></small>
 		<p>The attributes are stored in <b>instance variables</b></p>
-		<small><i>Instance variables are/should be initialized when an instance of a class is created, hence their name.</i></small>
+		<small><i>Instance variables are/should be initialized when an instance of a class is created (i.e. in a <a href="#constructors">constructor</a>), hence their name.</i></small>
 
 		<p>An object is an <b>instance</b> of a class. Upon initialization, you instantiate an object. Object instantiation occurs with the <b>new</b> keyword. You may instantiate <code>myTree</code> like the following:</p>
 		<div class='code-cntr'>
@@ -50,7 +50,7 @@
 			</code></pre>
 		</div>
 
-		<h3>Constructors</h3>
+		<h3 id="constructors">Constructors</h3>
 		<p>A <b>constructor</b> is a special method (behaviour) of a class that is called when you instantiate an object. It usually initializes the instance variables. Similar to other methods, parameters can be defined in the constructor as well. A constructor without any parameters is often called a <b>default constructor</b>.</p>
 		<p>Below is an example of a default constructor in the Tree class. It sets the instance variables to default values.</p>
 		<div class='code-cntr'>
@@ -112,6 +112,7 @@
 				}
 			</code></pre>
 		</div>
+		<small><i>The <code>growALeaf()</code> method is accessing the <code>numberOfLeaves</code> attribute for the current object.</i></small>
 		<small><i>What's the <code>public</code> keyword? I will cover that <a href="encapsulation">below</a></i></small>
 
 		<p>We can call the method on an object like such:</p>
@@ -123,6 +124,9 @@
 				myTree.growALeaf();
 			</code></pre>
 		</div>
+
+		<p>Methods and attributes of a particular object are accessed via <b>dot notation</b>: <code>objectName.method()</code> or <code>objectName.attribute</code>.</p>
+
 		<p>This method call will grow a leaf on <code>myTree</code>. Note that <code>yourTree</code> will be unaffected as the method is called on <code>myTree</code>.</p>
 
 		<h2 id="encapsulation">Encapsulation</h2>
@@ -200,6 +204,7 @@
 				Tree yourTree = new Tree("oak",100);
 
 				System.out.println("Original # of leaves: "+myTree.getNumberOfLeaves());
+				System.out.println("Original # of oak leaves: "+yourTree.getNumberOfLeaves());
 
 				myTree.growALeaf();
 				System.out.println("Grew a leaf: "+myTree.getNumberOfLeaves());
@@ -212,23 +217,126 @@
 		<div class='code-cntr'>
 			<pre><code class="lang-md">
 				Original # of leaves: 0
+				Original # of oak leaves: 100
 				Grew a leaf: 1
 				Set # of leaves: 12
 			</code></pre>
 		</div>
+
+		<h2>The static Keyword</h2>
+		<p>Static methods and attributes belong to a class instead of an instance of a class.</p>
+		<p>With non-static methods and attributes, such as <code>growALeaf()</code> above, an object (e.g. <code>myTree</code>) has to be created to access said method, as the method will modify or use attributes/methods that are related to itself (<code>myTree</code>) as opposed to other objects from the same class (e.g. <code>yourTree</code>). However, static attributes and methods can simply be called by referencing the class name:</p>
+		<div class='code-cntr'>
+			<pre><code class="lang-java">
+				ClassName.attribute;
+				ClassName.method();
+			</code></pre>
+		</div>
+		<small><i>If the static method / attribute is called from the same class, the <code>ClassName.</code> may be omitted.</i></small>
+
+		<p>To make a method or attribute static, use the <code>static</code> keyword:</p>
+		<div class='code-cntr'>
+			<pre><code class="lang-java">
+				private static int treeNo;
+
+				public static int getTotalNumberOfTrees() {
+					return treeNo;
+				}
+			</code></pre>
+		</div>
+		<p>Static attributes can be initialized upon declaration or in a static block:</p>
+		<div class='code-cntr'>
+			<pre><code class="lang-java">
+				// initialized upon declaration
+				private static int treeNo = 0;
+
+				// initialized in a static block
+				static {
+					treeNo = 0;
+				}
+			</code></pre>
+		</div>
+
+		<h3>An example</h3>
+		<p>Suppose we want to keep track of the number of Trees created. We can create a static integer variable, such as <code>treeNo</code>, and increase it every time a new Tree is created (i.e. every time a constructor is called).</p>
+
+		<p>In the example above, the <code>treeNo</code> variable is <i>private</i> to avoid other classes from changing this variable and setting it to inaccurate values.</p>
+		<small><i>Think of it as: the only "reason" why <code>treeNo</code> should be changed is if a Tree is created or destroyed. Such action can only happen within the <code>Tree</code> class; a <code>Cup</code> should not be able to determine the number of trees present.</i></small>
+
+		<p>However, other classes may want to know the number of Trees that have been created (the value of <code>treeNo</code>). A <code>getTotalNumberOfTrees()</code> method has been written to get this value. As it is <i>public</i>, accessing this method is not limited to the members of the <code>Tree</code> class.</p>
+
+		<p>Here is the revised <code>Tree</code> class to support this tree counting feature:</p>
+		<div class='code-cntr'>
+			<pre><code class="lang-java">
+				public class Tree {
+					/* other attributes omitted */
+
+					private static int treeNo;
+
+					static {
+						treeNo = 0;
+					}
+
+					public Tree() {
+						treeNo++;
+						/* the rest of the constructor is omitted */
+					}
+
+					public Tree(String species, int numberOfLeaves) {
+						treeNo++;
+						/* the rest of the constructor is omitted */
+					}
+
+					public static int getTotalNumberOfTrees() {
+						return treeNo;
+					}
+
+					/* other methods omitted */
+				}
+			</code></pre>
+		</div>
+
+		<p>An example of how to use this feature:</p>
+		<div class='code-cntr'>
+			<pre><code class="lang-java">
+				Tree myTree = new Tree();
+				System.out.println("Total # of Trees: " + Tree.getTotalNumberOfTrees());
+
+				Tree yourTree = new Tree("oak",100);
+				System.out.println("Total # of Trees: " + Tree.getTotalNumberOfTrees());
+			</code></pre>
+		</div>
+
+		<p>The output:</p>
+		<div class='code-cntr'>
+			<pre><code class="lang-md">
+				Total # of Trees: 1
+				Total # of Trees: 2
+			</code></pre>
+		</div>
+
+		<br>
+		<hr>
+		<br>
+
 		<p>Here is the complete code of the <code>Tree</code> class.</p>
 		<div class='code-cntr'>
 			<pre><code class="lang-java">
 				public class Tree {
 					private int numberOfLeaves;
 					private String species;
+					private static int treeNo;
+
+					static {
+						treeNo = 0;
+					}
 
 					public Tree() {
 						numberOfLeaves = 0;
 						species = "maple";
 					}
 
-					Tree(String species, int numberOfLeaves) {
+					public Tree(String species, int numberOfLeaves) {
 						this.numberOfLeaves = numberOfLeaves;
 						this.species = species;
 					}
@@ -253,22 +361,45 @@
 						this.species = species;
 					}
 
-					// Driver
-					public static void main(String [] args) {
-						Tree myTree = new Tree();
-						Tree yourTree = new Tree("oak",100);
-
-						System.out.println("Original # of leaves: "+myTree.getNumberOfLeaves());
-
-						myTree.growALeaf();
-						System.out.println("Grew a leaf: "+myTree.getNumberOfLeaves());
-
-						myTree.setNumberOfLeaves(12);
-						System.out.println("Set # of leaves: "+myTree.getNumberOfLeaves());
+					public static int getTotalNumberOfTrees() {
+						return treeNo;
 					}
 				}
 			</code></pre>
 		</div>
+		<p>Driver code (tests the program):</p>
+		<div class='code-cntr'>
+			<pre><code class="lang-java">
+				public static void main(String [] args) {
+					Tree myTree = new Tree();
+					System.out.println("Total # of Trees: " + Tree.getTotalNumberOfTrees());
+
+					Tree yourTree = new Tree("oak",100);
+					System.out.println("Total # of Trees: " + Tree.getTotalNumberOfTrees());
+
+					System.out.println("Original # of leaves: "+myTree.getNumberOfLeaves());
+					System.out.println("Original # of oak leaves: "+yourTree.getNumberOfLeaves());
+
+					myTree.growALeaf();
+					System.out.println("Grew a leaf: "+myTree.getNumberOfLeaves());
+
+					myTree.setNumberOfLeaves(12);
+					System.out.println("Set # of leaves: "+myTree.getNumberOfLeaves());
+				}
+			</code></pre>
+		</div>
+		<p>Output of final driver code:</p>
+		<div class='code-cntr'>
+			<pre><code class="lang-md">
+				Total # of Trees: 1
+				Total # of Trees: 2
+				Original # of leaves: 0
+				Original # of oak leaves: 100
+				Grew a leaf: 1
+				Set # of leaves: 12
+			</code></pre>
+		</div>
+
 		<h2>Sources</h2>
 		<small>
 			<ol class="list">
@@ -276,7 +407,7 @@
 			</ol>
 		</small>
 
-		<br />
+		<br>
 	</div>
 
 	<script src="js/base.js"></script>
