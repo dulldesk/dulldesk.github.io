@@ -15,7 +15,7 @@
 	/* background */
 	--bkgd: #fafafa;
 
-	--text: var(--lgt-main);
+	/*--text: var(--main);*/
 	--link: var(--lgt-main);
 	--hover: #5d414d;
     
@@ -68,14 +68,17 @@ body > *:not(nav), body > *:not(footer) {
 
 h2 {
     font-family: 'Work Sans', sans-serif;
-    font-weight: 300;
 	font-weight:600;
     color: black;
 }
 
-li, small, option, label, td, footer {
+h3 {
+	color: black;
+}
+
+li, small, option, label, td, footer, p {
 	font-family: 'Open Sans', sans-serif;
-	color: var(--text);
+	color: var(--main);
 }
 
 td {
@@ -84,13 +87,11 @@ td {
 
 li {
 	line-height: 210%;
-    color: var(--gry);
+    /*color: var(--gry);*/
 }
 
 p {
-    font-family: 'Open Sans', sans-serif;
 	line-height: 150%;
-    color: var(--main);
 }
 
 p.more-space {
