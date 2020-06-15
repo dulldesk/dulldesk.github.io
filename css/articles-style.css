@@ -16,7 +16,7 @@ td {
 	text-align: center;
 }
 
-tr:first-of-type {
+tr:first-of-type > td{
 	background-color: var(--secondary);
 	color:white;
 	/*font-weight: 600;*/

@@ -78,6 +78,10 @@ li, small, option, label, td, footer {
 	color: var(--text);
 }
 
+td {
+	color: black;
+}
+
 li {
 	line-height: 210%;
     color: var(--gry);
