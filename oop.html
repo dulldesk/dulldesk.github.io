@@ -223,7 +223,7 @@
 			</code></pre>
 		</div>
 
-		<h2>The static Keyword</h2>
+		<h2>The <code>static</code> Keyword</h2>
 		<p>Static methods and attributes belong to a class instead of an instance of a class.</p>
 		<p>With non-static methods and attributes, such as <code>growALeaf()</code> above, an object (e.g. <code>myTree</code>) has to be created to access said method, as the method will modify or use attributes/methods that are related to itself (<code>myTree</code>) as opposed to other objects from the same class (e.g. <code>yourTree</code>). However, static attributes and methods can simply be called by referencing the class name:</p>
 		<div class='code-cntr'>
@@ -355,10 +355,6 @@
 
 					public String getSpecies() {
 						return species;
-					}
-
-					public void setSpecies(String species) {
-						this.species = species;
 					}
 
 					public static int getTotalNumberOfTrees() {
