@@ -20,7 +20,7 @@
 		<p>Object-oriented programming, or OOP, refers to the concept of programming based on "objects". This article serves as an introduction to OOP.</p>
 
 		<h2>What is an object?</h2>
-		<p>An <b>object</b> is a data structure that has <b>states/attributes</b> (data) and can perform <b>behaviour</b> (method) on said attributes. Each object has a unique <b>identity</b> (chunk of memory dedicated to it).</p>
+		<p>An <b>object</b> is a data structure that has <b>states/attributes</b> (data) and can perform <b>behaviours</b> (methods) on said attributes. Each object has a unique <b>identity</b> (chunk of memory dedicated to it).</p>
 		<p>For example, you may have a Tree (object) that has a certain number of leaves (attribute) and is of a certain species (attribute). The following serves as a declaration of said tree. </p>
 		<div class='code-cntr'>
 			<pre><code class="lang-java">
@@ -40,7 +40,7 @@
 			</code></pre>
 		</div>
 		<small><i>In Java, class names should be capitalized.</i></small>
-		<p>The attributes are stored in <b>instance variables</b></p>
+		<p>The attributes are stored in <b>instance variables</b>.</p>
 		<small><i>Instance variables are/should be initialized when an instance of a class is created (i.e. in a <a href="#constructors">constructor</a>), hence their name.</i></small>
 
 		<p>An object is an <b>instance</b> of a class. Upon initialization, you instantiate an object. Object instantiation occurs with the <b>new</b> keyword. You may instantiate <code>myTree</code> like the following:</p>
@@ -67,7 +67,7 @@
 			</code></pre>
 		</div>
 		<p>In the above call, the (default) constructor was called to instantiate <code>myTree</code>.</p>
-		<p>A class can have multiple constructors. Below is an example of a constructor that takes two arguments that define what values the <code>numberOfLEaves</code> and <code>species</code> variables should be set to:</p>
+		<p>A class can have multiple constructors. Below is an example of a constructor that takes two arguments that define what values the <code>numberOfLeaves</code> and <code>species</code> variables should be set to:</p>
 		<div class='code-cntr'>
 			<pre><code class="lang-java">
 				public class Tree {
@@ -86,7 +86,25 @@
 				}
 			</code></pre>
 		</div>
-		<small><i>The <code>this</code> keyword refers to the attribute of a particular instance of an object. If there is no disambiguity as to which variable is being referred to (i.e. the instance and local scope variable names are different), then <code>this</code> can be omitted.</i></small>
+		<p>Constructors can even call other constructors with the keyword <code>this</code>.</p>
+		<div class='code-cntr'>
+			<pre><code class="lang-java">
+				public class Tree {
+					int numberOfLeaves;
+					String species;
+
+					Tree() {
+						this(maple, 0);
+					}
+
+					Tree(String species, int numberOfLeaves) {
+						this.numberOfLeaves = numberOfLeaves;
+						this.species = species;
+					}
+				}
+			</code></pre>
+		</div>
+		<small><i>The <code>this</code> keyword refers to the attribute of a particular instance of an object. If there is no ambiguity as to which variable is being referred to (i.e. the instance and local scope variable names are different), then <code>this</code> can be omitted.</i></small>
 		<p>The constructor with arguments can be used like such:</p>
 		<div class='code-cntr'>
 			<pre><code class="lang-java">
@@ -113,7 +131,7 @@
 			</code></pre>
 		</div>
 		<small><i>The <code>growALeaf()</code> method is accessing the <code>numberOfLeaves</code> attribute for the current object.</i></small>
-		<small><i>What's the <code>public</code> keyword? I will cover that <a href="encapsulation">below</a></i></small>
+		<small><i>What's the <code>public</code> keyword? I will cover that <a href="encapsulation">below</a></i>.</small>
 
 		<p>We can call the method on an object like such:</p>
 		<div class='code-cntr'>
@@ -149,7 +167,7 @@
 					<td>within the same class</td>
 				</tr>
 				<tr>
-					<td>private</td>
+					<td>protected</td>
 					<td>within the same class or a subclass of the class</td>
 				</tr>
 			</table>
@@ -332,8 +350,7 @@
 					}
 
 					public Tree() {
-						numberOfLeaves = 0;
-						species = "maple";
+						this("maple", 0);
 					}
 
 					public Tree(String species, int numberOfLeaves) {
