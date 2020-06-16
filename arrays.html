@@ -116,7 +116,7 @@
         <p>It is because of this concept that the output is not <code>1 2 3 4</code> (i.e. the array has not been modified). However, it's not as simple as this. I dig deeper in this concept <a href="oop.html" target="_blank">in this article</a>.</p>
 
         <h2 id="arraylists">ArrayLists</h2>
-        <p>Suppose that you want to be able to easily add and remove elements from an array. However, the length of an array is immutable. Instead, you can utilize Java's <code>List</code> interface. One of the subclasses of this interface is the <b>ArrayList</b></p>
+        <p>Suppose that you want to be able to easily add and remove elements from an array. However, the length of an array is immutable. Instead, you can utilize Java's <code>List</code> interface. One of the subclasses of this interface is the <b>ArrayList</b>.</p>
 
         <h2>Declaring and initializing an ArrayList</h2>
         <p>Below is the code to declare or initialize an ArrayList:</p>
@@ -141,7 +141,7 @@
         
         <p><code> myList.remove(5)</code> removes the element at index <code>5</code> from the list.</p>
         <p><code> myList.remove(new Integer(5))</code> removes the first occurence of an Integer element <code>5</code> from the list.</p>
-        <small><i>More formally, the previous operation takes in an Object parameter. While for e.g. booleans, Java can automatically cast it to a <code>Boolean</code> object, directly passing in an Integer object avoids the ambiguity between an <code>int</code> (remove the index) and an <code>Integer</code> (remove an element). </i></small>
+        <small><i>More formally, the previous operation takes in an Object parameter. While for e.g. booleans, Java can autobox it to a <code>Boolean</code> object; directly passing in an Integer object avoids the ambiguity between an <code>List#remove(int)</code> (remove the index) and an <code>List#remove(Object)</code> (remove an element). </i></small>
 
         <p><code> myList.get(5)</code> gets the element at index <code>5</code> of the list.</p>
     </div>
