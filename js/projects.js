@@ -55,6 +55,12 @@ const work = {
 		"github" : "https://github.com/dulldesk/calendar",
 		"ongoing" : true
 	},
+	"drivetest" : {
+		"name" : "DriveTest Centre Checker",
+		"caption" : "A script to check whether DriveTest centres have opened (closure is due to the COVID-19 pandemic)",
+		"lang" : "JavaScript: node.js, Nightmare.js",
+		"github" : "https://github.com/dulldesk/drivetest-check"
+	},
 	"quicksort" : {
 		"name" : "Quicksort Demo",
 		"caption" : "A Processing to demonstrate the quicksort algorithm",
