@@ -76,7 +76,7 @@ h3 {
 	color: black;
 }
 
-li, small, option, label, td, footer, p {
+li, small, option, label, td, footer, p, a {
 	font-family: 'Open Sans', sans-serif;
 	color: var(--main);
 }
@@ -100,14 +100,29 @@ p.more-space {
 
 a, a:visited {
 	text-decoration: none;
-	color: var(--link); 
+	/*color: var(--link); */
 	transition: color 0.15s ease-out;
 	position:relative;
+	/*border:none;*/
+	border-bottom: 1px solid var(--link);
+}
+
+a:hover {
+	color: var(--link); 
+	transition: color 0.15s ease-out;
+	/*text-decoration-line: underline;*/
+	/*border-bottom: 1px solid var(--hover);*/
+	border:none;
+}
+
+a.ignore {
+	border: none;
 }
 
 a.menuitem, a.menuitem:visited {
 	transition: all 0.1s ease-out;
 	color: var(--main); 
+	border:none;
 }
 
 a.menuitem::before {
@@ -131,11 +146,6 @@ a.menuitem.ignore::before {
 
 a.menuitem.ignore:hover::before {
 	transform: scaleX(0);
-}
-
-a:hover {
-	color: var(--hover); 
-	transition: color 0.15s ease-out;
 }
 
 /*title*/
