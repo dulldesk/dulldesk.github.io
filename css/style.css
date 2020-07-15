@@ -100,19 +100,15 @@ p.more-space {
 
 a, a:visited {
 	text-decoration: none;
-	/*color: var(--link); */
-	transition: color 0.15s ease-out;
 	position:relative;
-	/*border:none;*/
 	border-bottom: 1px solid var(--link);
+	transition: all 0.15s ease-out;
 }
 
 a:hover {
 	color: var(--link); 
-	transition: color 0.15s ease-out;
-	/*text-decoration-line: underline;*/
-	/*border-bottom: 1px solid var(--hover);*/
-	border:none;
+	border-bottom: 1px solid rgba(0,0,0,0);
+	transition: all 0.15s ease-out;
 }
 
 a.ignore {
