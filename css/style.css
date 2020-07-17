@@ -147,7 +147,8 @@ a.menuitem.ignore:hover::before {
 /*title*/
 
 .title {
-	font-size:150%;
+	/*font-size:150%;*/
+	font-size: calc(min((100vw - 240px) * 0.13,150%));
 	display:inline-block;
 	margin-bottom: 15px;
 
