@@ -3,7 +3,7 @@ $(document).ready(() => {
 
 		$("body").prepend($("<nav id='navbar'></nav>") )
 	})()).done(() => {
-		$.get("nav.html",data => {
+		$.get("https://dulldesk.github.io/components/nav.html",data => {
 			$.when((() => {
 				$('#navbar').html(data);
 			})()).done(() => {
@@ -26,7 +26,7 @@ $(document).ready(() => {
 	$.when((() => {
 		$("body").append($("<footer id='footer'></footer>") )
 	})()).done(() => {
-		$.get("footer.html",data => {
+		$.get("https://dulldesk.github.io/components/footer.html",data => {
 			$('#footer').html(data);
 		});
 	})
