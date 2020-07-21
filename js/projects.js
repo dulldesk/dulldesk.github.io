@@ -18,7 +18,7 @@ const work = {
 		"caption" : "My personal portfolio website",
 		"lang" : "HTML, CSS, JavaScript, JQuery",
 		"link" : "https://dulldesk.github.io",
-		"github" : "https://github.com/dulldesk.github.io",
+		"github" : "https://github.com/dulldesk/dulldesk.github.io",
 		"short" : "dulldesk.github.io"
 	},
 	"sched-del" : {
@@ -46,6 +46,15 @@ const work = {
 		"github" : "https://github.com/dulldesk/chords",
 		"link" : "https://dulldesk.github.io/chords",
 		"short" : "dulldesk.github.io/chords",
+		"ongoing" : true
+	},
+	"user-gen" : {
+		"name" : "Username Generator",
+		"caption" : "Generates a username based on a random adjective and noun.",
+		"lang" : "HTML, CSS, JavaScript, JQuery",
+		"github" : "https://github.com/dulldesk/alliter-gen/",
+		"link" : "https://dulldesk.github.io/alliter-gen/",
+		"short" : "dulldesk.github.io/alliter-gen/",
 		"ongoing" : true
 	},
 	"calendar" : {
