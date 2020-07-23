@@ -1,4 +1,4 @@
-* {
+*:not(code) {
     font-family: "Segoe UI", sans-serif;
 }
 
