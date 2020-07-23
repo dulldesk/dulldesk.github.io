@@ -46,7 +46,6 @@ const work = {
 		"github" : "https://github.com/dulldesk/chords",
 		"link" : "https://dulldesk.github.io/chords",
 		"short" : "dulldesk.github.io/chords",
-		"ongoing" : true
 	},
 	"user-gen" : {
 		"name" : "Username Generator",
@@ -55,6 +54,15 @@ const work = {
 		"github" : "https://github.com/dulldesk/alliter-gen/",
 		"link" : "https://dulldesk.github.io/alliter-gen/",
 		"short" : "dulldesk.github.io/alliter-gen/",
+		"ongoing" : true
+	},
+	"words-api" : {
+		"name" : "Words API",
+		"caption" : "An API that returns a noun, adjective, or animal via a GET request to the site.",
+		"lang" : "JavaScript: Node.js, Express.js",
+		"github" : "https://github.com/dulldesk/words-api/",
+		"link" : "https://random-word-form.herokuapp.com/",
+		"short" : "random-word-form.herokuapp.com",
 		"ongoing" : true
 	},
 	"calendar" : {
@@ -67,7 +75,7 @@ const work = {
 	"drivetest" : {
 		"name" : "DriveTest Centre Checker",
 		"caption" : "A script to check whether DriveTest centres have opened (closure is due to the COVID-19 pandemic)",
-		"lang" : "JavaScript: node.js, Nightmare.js",
+		"lang" : "JavaScript: Node.js, Nightmare.js",
 		"github" : "https://github.com/dulldesk/drivetest-check"
 	},
 	"quicksort" : {
