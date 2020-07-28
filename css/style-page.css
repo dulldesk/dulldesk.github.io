@@ -17,6 +17,10 @@ small {
     color:grey;
 }
 
+code {
+    font-family: Consolas, monospace;
+}
+
 .no-select {
     -moz-user-select: none;
     -webkit-user-select: none;
