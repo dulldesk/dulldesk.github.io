@@ -1,27 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Work+Sans|Open+Sans&display=swap');
-
-/*colour variables*/
-:root {
-	/* primary */
-	--main: #694d45;
-	/*--main2: #8d570f;*/
-
-	/* secondary */
-	--secondary: #7e858b;
-
-	--lgt-main: #986a2f;
-    --alt-main: #e8a041;
-
-	/* background */
-	--bkgd: #fafafa;
-
-	/*--text: var(--main);*/
-	--link: var(--lgt-main);
-	--hover: #5d414d;
-    
-    --gry: #636261;
-    --lgt-gry: #d6cfc8;
-}
+@import url('colours.css');
 
 html {
 	overflow-y: overlay;
