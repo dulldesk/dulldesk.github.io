@@ -19,6 +19,12 @@ const work = {
 		"github" : "https://github.com/dulldesk/dulldesk.github.io",
 		"short" : "dulldesk.github.io"
 	},
+	"asciicat" : {
+		"name" : "PowerShell ASCII Cat",
+		"caption" : "PowerShell script to generate a random ASCII cat. Can be used to generate one upon PowerShell console launch.",
+		"lang" : "PowerShell",
+		"github" : "https://github.com/dulldesk/rand-asciicat"
+	},
 	"sched-del" : {
 		"name" : "Scheduled File Deleter",
 		"caption" : "PowerShell script to schedule file deletions",
