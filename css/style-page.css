@@ -27,3 +27,7 @@ code {
     -ms-user-select: none;
     user-select: none;
 }
+
+p.no-margin {
+    margin: 0;
+}
