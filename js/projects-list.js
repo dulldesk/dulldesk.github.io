@@ -66,8 +66,7 @@ const work = {
 		"lang" : "JavaScript: Node.js, Express.js",
 		"github" : "https://github.com/dulldesk/words-api/",
 		"link" : "https://random-word-form.herokuapp.com/",
-		"short" : "random-word-form.herokuapp.com",
-		"ongoing" : true
+		"short" : "random-word-form.herokuapp.com"
 	},
 	"calendar" : {
 		"name" : "Calendar Phone Background Generator",
