@@ -1,11 +1,12 @@
 const cntr = $('#node-cntr');
 
 const icons = {
-	"github" : "https://raw.githubusercontent.com/primer/octicons/e65f8b2876b23a1157d97a0df7598c649f214149/icons/mark-github.svg",
-	"gist" : "https://raw.githubusercontent.com/primer/octicons/e65f8b2876b23a1157d97a0df7598c649f214149/icons/logo-gist.svg"
+	"GitHub" : "https://raw.githubusercontent.com/primer/octicons/e65f8b2876b23a1157d97a0df7598c649f214149/icons/mark-github.svg",
+	"Gist" : "https://raw.githubusercontent.com/primer/octicons/e65f8b2876b23a1157d97a0df7598c649f214149/icons/logo-gist.svg"
 }
 
 const bullet = '•';
+const shortLink = link => link.substring(link.indexOf("//")+2).replace(/\/+$/,'');
 
 for (let key in work) {
 	let node = work[key];
@@ -22,29 +23,33 @@ for (let key in work) {
 	langP.append(lang);
 
 	let hasLink = false;
-	if (node.hasOwnProperty('github')) {
-		ft.append(footicon('GitHub',node.github,icons.github));
-	}
-	if (node.hasOwnProperty('gist')) {
-		ft.append(footicon('Gist',node.gist,icons.gist));
-	}
-	if (node.hasOwnProperty('link')) {
-		let a = $('<a></a>');
-		let img = $('<span></span>');
 
-		img.text("< />");
-		img.attr('title',`Go to ${node.short}`);
-		img.addClass('ignore');
-		// img.attr('alt','link');
-		a.attr('href',node.link);
+	for (let footelm in node.external) {
+		let type = footelm.name.toLowerCase();
+		if (type == "github" || type == "gist") {
+			ft.append(footicon(footelm.name,footelm.src,icons[type]));
+		}
+		else if (footelm.name.toLowerCase() == "gist") {
+			ft.append(footicon('Gist',footelm.src,icons[type]));
+		}
+		else if (footelm.name == "link") {
+			let a = $('<a></a>');
+			let img = $('<span></span>');
 
-		a.addClass('no-select');
-		a.addClass('ignore');
-		img.addClass('card-link-icon');
-		a.attr('target','_blank');
-		a.append(img);
-		
-		ft.append(a);
+			img.text("< />");
+			img.attr('title',`Go to ${shortLink(footelm.src)}`);
+			img.addClass('ignore');
+			// img.attr('alt','link');
+			a.attr('href',footelm.src);
+
+			a.addClass('no-select');
+			a.addClass('ignore');
+			img.addClass('card-link-icon');
+			a.attr('target','_blank');
+			a.append(img);
+			
+			ft.append(a);
+		}
 	}
 
 	// let img = $('<img></img>')
