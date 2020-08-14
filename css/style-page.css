@@ -1,33 +1,33 @@
-*:not(code) {
-    font-family: "Segoe UI", sans-serif;
-}
-
-body {
-    padding: 0 60px;
-    padding-top: 30px;
-}
-
-#name-block {
-    text-align: center;
-    font-size: 400%;
-}
-
-small {
-    font-style:italic;
-    color:grey;
+* {
+  font-family: "Segoe UI", sans-serif;
 }
 
 code {
-    font-family: Consolas, monospace;
+  font-family: Consolas, monospace;
+}
+
+body {
+  padding: 0 60px;
+  padding-top: 30px;
+}
+
+#name-block {
+  text-align: center;
+  font-size: 400%;
+}
+
+small {
+  font-style: italic;
+  color: grey;
 }
 
 .no-select {
-    -moz-user-select: none;
-    -webkit-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 p.no-margin {
-    margin: 0;
+  margin: 0;
 }

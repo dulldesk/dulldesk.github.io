@@ -1,66 +1,61 @@
+.card:hover, .card {
+  transition: box-shadow 0.1s ease-out;
+}
+
 .card {
-	margin:5px auto;
-	margin: 5px auto 10px;
-
-	max-width:100%;
-	float: none;
+  margin: 5px auto 10px;
+  max-width: 100%;
+  float: none;
 }
-
 .card:hover {
-	box-shadow: 5px 5px 10px grey;
+  box-shadow: 5px 5px 10px grey;
 }
-
-.card, .card:hover {
-	transition: box-shadow 0.1s ease-out;
-}
-
 .card h2 {
-	font-weight: 300;
+  font-weight: 300;
 }
 
 img.card-link-icon {
-	filter: opacity(40%);
-	-webkit-filter: opacity(40%);
+  filter: opacity(40%);
+  -webkit-filter: opacity(40%);
+}
+
+.card-link-icon:hover, .card-link-icon {
+  transition: filter 0.2s ease-out;
 }
 
 .card-link-icon {
-	filter: opacity(80%);
-	-webkit-filter: opacity(80%);
-	color: grey;
+  filter: opacity(80%);
+  -webkit-filter: opacity(80%);
+  color: grey;
 }
-
 .card-link-icon:hover {
-	filter: opacity(100%);
-	-webkit-filter: opacity(100%);
-	cursor:pointer;
-	color: black;
-}
-
-.card-link-icon, .card-link-icon:hover {
-	transition: filter 0.2s ease-out;
+  filter: opacity(100%);
+  -webkit-filter: opacity(100%);
+  cursor: pointer;
+  color: black;
 }
 
 .card, .card > div {
-	box-sizing: content-box;
-}
-
-.card-footer {
-	display:flex;
-	align-items: center;
-
-	/* override footer css */
-	background-color: #fff;
-	border-top: none;
-	padding-top: 0;
-}
-
-.card-footer > * {
-	margin-right: 10px;
+  box-sizing: content-box;
 }
 
 .card > hr, .card-body + hr {
-	margin-left: 20px;
-	margin-right: 20px;
-	margin-bottom: 15px;
-	margin-top: 0;
+  margin: 20px;
+  margin-bottom: 15px;
+  margin-top: 0px;
+}
+
+.card-footer {
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  border-top: none;
+  padding-top: 0;
+}
+.card-footer > * {
+  margin-right: 10px;
+}
+
+.card-title {
+  margin: 0;
 }

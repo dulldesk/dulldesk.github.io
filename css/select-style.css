@@ -1,64 +1,46 @@
 form {
-	display:inline-flex;
-	flex-flow: column wrap;
-	border: 1px solid grey;
-	border-radius: 5px;
-	position:relative;
+  display: inline-flex;
+  flex-flow: column wrap;
+  border: 1px solid grey;
+  border-radius: 5px;
+  position: relative;
 }
-
 form .options {
-	/*display:inline-flex;*/
-	flex-flow: column wrap;
-	position:absolute;
-	width:100%;
-	transform: translateY(32px);
-	border-left: 1px solid grey;
-	border-right: 1px solid grey;
-	display:none;
+  flex-flow: column wrap;
+  position: absolute;
+  width: 100%;
+  transform: translateY(32px);
+  border-left: 1px solid grey;
+  border-right: 1px solid grey;
+  display: none;
 }
-
 form .options:last-child {
-	border-bottom:1px solid grey;
-	border-bottom-left-radius: 5px;
-	border-bottom-right-radius: 5px;
+  border-bottom: 1px solid grey;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
 }
-
 form input {
-	display:none;
+  display: none;
 }
-
-form input:checked+label {
-	color: white;
+form input:checked + label {
+  color: white;
 }
-
 form label {
-	display:inline-block;
+  display: inline-block;
 }
-
 form .choice {
-	padding:5px 16px;
-	padding-left:10px;
+  padding: 5px 16px;
+  padding-left: 10px;
 }
-
-/*
-form > .choice:not(:first-child) {
-	display:inline-flex;
-}*/
-
-/* triangle arrow */
 form > :first-child > :first-child::after {
-    content: '';
-    position: relative;
-    left: 7px;
-    top: 15px;
-    width: 0;
-    height: 0;
-    border-left: 3px solid transparent;
-    border-right: 3px solid transparent;
-    border-top: 6px solid black;
-    clear: both;
+  content: "";
+  position: relative;
+  left: 7px;
+  top: 15px;
+  width: 0;
+  height: 0;
+  clear: both;
+  border: 3px solid transparent;
+  border-top: 6px solid black;
+  border-bottom: none;
 }
-/*
-form > :nth-child(2) {
-	border-top: 0.5px solid grey;
-}*/

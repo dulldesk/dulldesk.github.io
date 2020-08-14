@@ -1,0 +1,129 @@
+@use 'sass:list';
+
+h3 {
+	font-weight: 600;
+}
+
+pre {
+	border-radius:15px;
+}
+
+.tablewrapper {
+	overflow-x: auto;
+}
+
+table,tr,td {
+	border:1px solid grey;
+	border-collapse: collapse;
+}
+
+td {
+	padding: 15px;
+	text-align: center;
+}
+
+$secondary_border: 1px solid var(--secondary);
+$bkgd_border: 1px solid var(--bkgd);
+
+tr:first-of-type {
+	& > td {
+		background-color: var(--secondary);
+		color:white;
+		// font-weight: 600;
+	
+		border-top: $secondary_border;
+		border-bottom: $secondary_border;
+	}
+	& > td:not(:last-child) {
+		border-right: $bkgd_border;
+	}
+	& > td:last-child {
+		border-right: $secondary_border;
+	}
+	& > td:first-child {
+		border-left: $secondary_border;
+	}
+}
+
+td.first-col {
+	background-color: var(--secondary);
+	color:white;
+	border-right: $bkgd_border;
+	border-left: $secondary_border;
+	
+	tr:not(:first-of-type) & {
+		border-top: $bkgd_border;
+		border-bottom: $secondary_border;
+	}
+	tr:first-of-type & {
+		border-top: $secondary_border;
+		border-bottom: $bkgd_border;
+	}
+}
+
+code {
+	:not(pre) > & {
+		background-color: #f5f2f0;
+		border: 0.1px solid #ddd;
+		padding: 0.1em;
+		box-sizing: content-box;
+		font-size: large;
+	}
+
+	small & {
+		font-size: small;
+	}
+}
+
+li + p {
+	margin-top: 0;
+}
+
+.tablewrapper + small, small + .code-cntr, .tablewrapper + .code-cntr {
+	margin-top: 1.5em;
+	display: inherit;
+}
+
+// table cell shading 
+$pale_red: rgba(244,187,211,1);
+$pale_blue: rgba(201,249,255,1);
+$pale_green: rgba(212,224,155,1);
+
+@mixin bkgd-gradient($gradient) {
+	$prefixes: -moz-, "", -webkit-;
+
+	@each $pre in $prefixes {
+		background: #{$pre}linear-gradient(#{$gradient});
+	}
+
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#{list.nth(list.nth($gradient,2),1)}",endColorstr="#{list.nth(list.nth($gradient,-1),1)}",GradientType=1);
+}
+
+td {
+	@each $col in ("red" $pale_red), ("green" $pale_green), ("blue" $pale_blue) {
+		&.#{list.nth($col,1)}-shade {
+			background-color: list.nth($col,2);
+		}
+	}
+
+	&.red-shade.blue-shade {
+		@include bkgd-gradient((90deg, #{$pale_red} 49%, #{$pale_blue} 51%));
+	}
+	
+	&.red-shade.green-shade.blue-shade {
+		@include bkgd-gradient((90deg, #{$pale_red} 33%, #{$pale_green} 34%, #{$pale_green} 65%, #{$pale_blue} 66%));
+	}
+}
+
+#insertion-example {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	text-align: center;
+
+	img {
+		height: 200px;
+		width: 340px;
+		border: 2px solid black;
+	}
+}
