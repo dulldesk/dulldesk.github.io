@@ -15,11 +15,11 @@ pre {
 table,tr,td {
 	border:1px solid grey;
 	border-collapse: collapse;
+	text-align: center;
 }
 
 td {
 	padding: 15px;
-	text-align: center;
 }
 
 $secondary_border: 1px solid var(--secondary);
@@ -115,7 +115,7 @@ td {
 	}
 }
 
-#insertion-example {
+.example {
 	display: flex;
 	align-items: center;
 	flex-direction: column;

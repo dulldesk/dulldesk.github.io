@@ -13,11 +13,11 @@ pre {
 table, tr, td {
   border: 1px solid grey;
   border-collapse: collapse;
+  text-align: center;
 }
 
 td {
   padding: 15px;
-  text-align: center;
 }
 
 tr:first-of-type > td {
@@ -93,13 +93,13 @@ td.red-shade.green-shade.blue-shade {
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#f4bbd3",endColorstr="#c9f9ff",GradientType=1);
 }
 
-#insertion-example {
+.example {
   display: flex;
   align-items: center;
   flex-direction: column;
   text-align: center;
 }
-#insertion-example img {
+.example img {
   height: 200px;
   width: 340px;
   border: 2px solid black;
