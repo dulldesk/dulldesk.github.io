@@ -20,7 +20,7 @@
 	"website":{
 		"name":"Personal Website",
 		"caption":"My personal portfolio website",
-		"lang":"HTML, CSS, JavaScript, JQuery",
+		"lang":"HTML, Sass/CSS, JavaScript, JQuery",
 		"external":[{
 			"type":"link",
 			"src":"https://dulldesk.github.io"
@@ -141,5 +141,17 @@
 		"caption":"A collage generator site. Upload an image and a collage will be created. Inspired by an AP Computer Science Student Lab.",
 		"lang":"HTML, CSS, JavaScript",
 		"ongoing":true
+	},
+	"projects":{
+		"name":"Projects Page",
+		"caption":"This page: a portfolio of my work and projects. Originally written with JQuery before being refactored into React.",
+		"lang":"JavaScript: React.js; HTML, Sass",
+		"external":[{
+			"type":"link",
+			"src":"https://dulldesk.github.io/projects/"
+		},{
+			"type":"GitHub",
+			"src":"https://github.com/dulldesk/projects/"
+		}]
 	}
 }
