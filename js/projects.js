@@ -22,7 +22,8 @@ async function addProjects() {
 		let bd = $('<div></div>').addClass('card-body');
 		let ft = $('<div></div>').addClass('card-footer');
 
-		let title = $('<h2></h2>').text(`${node.name + (node.ongoing ? ' ⚗' : '')}`).addClass('card-title');
+		let title = $('<h2></h2>').text(`${node.name}`).addClass('card-title');
+		if (node.ongoing) title.append("<span class='no-select' style='cursor:help' title='ongoing'>&nbsp⚗</span>");
 		let cap = $('<p></p>').text(node.caption).addClass('card-text');
 
 		let langP = $('<p></p>').addClass('card-text');
@@ -80,6 +81,7 @@ async function addProjects() {
 		img.attr('title',`Go to ${name}`);
 		img.attr('alt',name);
 		a.attr('href',link);
+		a.attr("rel","noopener noreferrer");
 
 		img.attr('draggable','false');
 		img.addClass('card-link-icon');
