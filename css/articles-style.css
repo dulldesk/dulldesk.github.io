@@ -11,7 +11,7 @@ pre {
 }
 
 table, tr, td {
-  border: 1px solid grey;
+  border: 1px solid var(--secondary);
   border-collapse: collapse;
   text-align: center;
 }
@@ -24,7 +24,7 @@ tr:first-of-type > td {
   background-color: var(--secondary);
   color: white;
   border-top: 1px solid var(--secondary);
-  border-bottom: 1px solid var(--secondary);
+  border-bottom: 1px solid transparent;
 }
 tr:first-of-type > td:not(:last-child) {
   border-right: 1px solid var(--bkgd);
@@ -36,19 +36,18 @@ tr:first-of-type > td:first-child {
   border-left: 1px solid var(--secondary);
 }
 
-td.first-col {
+table.first-col td:first-child {
   background-color: var(--secondary);
   color: white;
-  border-right: 1px solid var(--bkgd);
   border-left: 1px solid var(--secondary);
+  border-right: 1px solid var(--bkgd);
 }
-tr:not(:first-of-type) td.first-col {
+table.first-col tr:first-of-type > td:first-child {
+  border-bottom: 1px solid var(--bkgd);
+}
+table.first-col tr:not(:first-of-type) > td:first-child {
   border-top: 1px solid var(--bkgd);
   border-bottom: 1px solid var(--secondary);
-}
-tr:first-of-type td.first-col {
-  border-top: 1px solid var(--secondary);
-  border-bottom: 1px solid var(--bkgd);
 }
 
 :not(pre) > code {

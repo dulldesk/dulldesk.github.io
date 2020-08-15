@@ -12,8 +12,12 @@ pre {
 	overflow-x: auto;
 }
 
+$secondary_border: 1px solid var(--secondary);
+$bkgd_border: 1px solid var(--bkgd);
+$no_border: 1px solid transparent;
+
 table,tr,td {
-	border:1px solid grey;
+	border:$secondary_border;
 	border-collapse: collapse;
 	text-align: center;
 }
@@ -22,43 +26,45 @@ td {
 	padding: 15px;
 }
 
-$secondary_border: 1px solid var(--secondary);
-$bkgd_border: 1px solid var(--bkgd);
-
 tr:first-of-type {
-	& > td {
+	> td {
 		background-color: var(--secondary);
 		color:white;
 		// font-weight: 600;
 	
 		border-top: $secondary_border;
-		border-bottom: $secondary_border;
+		border-bottom: $no_border;
 	}
-	& > td:not(:last-child) {
+	> td:not(:last-child) {
 		border-right: $bkgd_border;
 	}
-	& > td:last-child {
+	> td:last-child {
 		border-right: $secondary_border;
 	}
-	& > td:first-child {
+	> td:first-child {
 		border-left: $secondary_border;
 	}
 }
 
-td.first-col {
-	background-color: var(--secondary);
-	color:white;
-	border-right: $bkgd_border;
-	border-left: $secondary_border;
-	
-	tr:not(:first-of-type) & {
-		border-top: $bkgd_border;
-		border-bottom: $secondary_border;
+table.first-col {
+	$td-first: "td:first-child";
+
+	#{$td-first} {
+		background-color: var(--secondary);
+		color:white;
+		border-left: $secondary_border;
+		border-right: $bkgd_border;
 	}
-	tr:first-of-type & {
-		border-top: $secondary_border;
+
+	tr:first-of-type > #{$td-first} {
+		// border-top: $secondary_border; // default [above]
 		border-bottom: $bkgd_border;
 	}
+	
+	tr:not(:first-of-type) > #{$td-first} {
+		border-top: $bkgd_border;
+		border-bottom: $secondary_border;
+	}	
 }
 
 code {

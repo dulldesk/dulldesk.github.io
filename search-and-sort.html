@@ -72,13 +72,13 @@
 		<p>Suppose you have the following array and you want to find the position of the value <code>5</code>. </p>
         <p>We will set the index of the left pointer to <code>0</code> and the index of the right pointer to the length of the array minus 1 (the other end of the array; <code>6</code>).</p>
         <div class="tablewrapper">
-            <table>
+            <table class="first-col">
                 <tr>
-                    <td class="first-col">Index</td>
+                    <td>Index</td>
                     <td>0</td> <td>1</td> <td>2</td> <td>3</td> <td>4</td> <td>5</td> <td>6</td>
                 </tr>
                 <tr>
-                    <td class="first-col">Value</td>
+                    <td>Value</td>
                     <td class="red-shade">1</td> <td>3</td> <td>5</td> <td>7</td> <td>9</td> <td>11</td> <td class="blue-shade">13</td>
                 </tr>
             </table>
@@ -86,13 +86,13 @@
 		<small><i>The index of the left pointer is shaded red; the index of the right pointer is shaded blue.</i></small>
 		<p>Then, we will check if the middle index in between these two pointers is larger, smaller, or equal to the target value.</p>
         <div class="tablewrapper">
-            <table>
+            <table class="first-col">
                 <tr>
-                    <td class="first-col">Index</td>
+                    <td>Index</td>
                     <td>0</td> <td>1</td> <td>2</td> <td>3</td> <td>4</td> <td>5</td> <td>6</td>
                 </tr>
                 <tr>
-                    <td class="first-col">Value</td>
+                    <td>Value</td>
                     <td class="red-shade">1</td> <td>3</td> <td>5</td> <td class="green-shade">7</td> <td>9</td> <td>11</td> <td class="blue-shade">13</td>
                 </tr>
             </table>
@@ -101,13 +101,13 @@
 
 		<p>Because the target value (<code>5</code>) is less than the middle value, we will move the right pointer to the middle index minus 1. Note that no value less than or equal to the target is right of the right pointer.</p>
         <div class="tablewrapper">
-            <table>
+            <table class="first-col">
                 <tr>
-                    <td class="first-col">Index</td>
+                    <td>Index</td>
                     <td>0</td> <td>1</td> <td>2</td> <td>3</td> <td>4</td> <td>5</td> <td>6</td>
                 </tr>
                 <tr>
-                    <td class="first-col">Value</td>
+                    <td>Value</td>
                     <td class="red-shade">1</td> <td>3</td> <td class="blue-shade">5</td> <td>7</td> <td>9</td> <td>11</td> <td>13</td>
                 </tr>
             </table>
@@ -115,26 +115,26 @@
 
         <p>Finding the middle index again:</p>
         <div class="tablewrapper">
-            <table>
+            <table class="first-col">
                 <tr>
-                    <td class="first-col">Index</td>
+                    <td>Index</td>
                     <td>0</td> <td>1</td> <td>2</td> <td>3</td> <td>4</td> <td>5</td> <td>6</td>
                 </tr>
                 <tr>
-                    <td class="first-col">Value</td>
+                    <td>Value</td>
                     <td class="red-shade">1</td> <td class="green-shade">3</td> <td class="blue-shade">5</td> <td>7</td> <td>9</td> <td>11</td> <td>13</td>
                 </tr>
             </table>
         </div>
         <p>The target value (<code>5</code>) is greater than the value at the middle index (<code>3</code>). We will move the left pointer to the middle index plus 1.</p>
         <div class="tablewrapper">
-            <table>
+            <table class="first-col">
                 <tr>
-                    <td class="first-col">Index</td>
+                    <td>Index</td>
                     <td>0</td> <td>1</td> <td>2</td> <td>3</td> <td>4</td> <td>5</td> <td>6</td>
                 </tr>
                 <tr>
-                    <td class="first-col">Value</td>
+                    <td>Value</td>
                     <td>1</td> <td>3</td> <td class="red-shade blue-shade">5</td> <td>7</td> <td>9</td> <td>11</td> <td>13</td>
                 </tr>
             </table>
@@ -143,13 +143,13 @@
 
         <p>Finding the middle index:</p>
         <div class="tablewrapper">
-            <table>
+            <table class="first-col">
                 <tr>
-                    <td class="first-col">Index</td>
+                    <td>Index</td>
                     <td>0</td> <td>1</td> <td>2</td> <td>3</td> <td>4</td> <td>5</td> <td>6</td>
                 </tr>
                 <tr>
-                    <td class="first-col">Value</td>
+                    <td>Value</td>
                     <td>1</td> <td>3</td> <td class="red-shade green-shade blue-shade">5</td> <td>7</td> <td>9</td> <td>11</td> <td>13</td>
                 </tr>
             </table>
