@@ -83,13 +83,11 @@ td.blue-shade {
 td.red-shade.blue-shade {
   background: -moz-linear-gradient(90deg, #f4bbd3 49%, #c9f9ff 51%);
   background: linear-gradient(90deg, #f4bbd3 49%, #c9f9ff 51%);
-  background: -webkit-linear-gradient(90deg, #f4bbd3 49%, #c9f9ff 51%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#f4bbd3",endColorstr="#c9f9ff",GradientType=1);
 }
 td.red-shade.green-shade.blue-shade {
   background: -moz-linear-gradient(90deg, #f4bbd3 33%, #d4e09b 34%, #d4e09b 65%, #c9f9ff 66%);
   background: linear-gradient(90deg, #f4bbd3 33%, #d4e09b 34%, #d4e09b 65%, #c9f9ff 66%);
-  background: -webkit-linear-gradient(90deg, #f4bbd3 33%, #d4e09b 34%, #d4e09b 65%, #c9f9ff 66%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#f4bbd3",endColorstr="#c9f9ff",GradientType=1);
 }
 

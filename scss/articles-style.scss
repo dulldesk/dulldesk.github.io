@@ -90,7 +90,7 @@ $pale_blue: rgba(201,249,255,1);
 $pale_green: rgba(212,224,155,1);
 
 @mixin bkgd-gradient($gradient) {
-	$prefixes: -moz-, "", -webkit-;
+	$prefixes: -moz-, ""; //, -webkit-;
 
 	@each $pre in $prefixes {
 		background: #{$pre}linear-gradient(#{$gradient});
