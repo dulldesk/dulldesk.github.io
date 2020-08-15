@@ -57,14 +57,18 @@ img.card-link-icon {
 	}
 }
 
+// override background for footer as regular bkgd glitches
+%temp-footer-bkgd {
+	background-color: #fff;
+	border-top: none;
+	padding-top: 0;
+}
+
 .card-footer {
 	display:flex;
 	align-items: center;
 
-	// override footer css 
-	background-color: #fff;
-	border-top: none;
-	padding-top: 0;
+	@extend %temp-footer-bkgd;
 	
 	& > * {
 		margin-right: 10px;

@@ -46,11 +46,14 @@ img.card-link-icon {
 }
 
 .card-footer {
-  display: flex;
-  align-items: center;
   background-color: #fff;
   border-top: none;
   padding-top: 0;
+}
+
+.card-footer {
+  display: flex;
+  align-items: center;
 }
 .card-footer > * {
   margin-right: 10px;
