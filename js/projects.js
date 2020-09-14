@@ -3,7 +3,7 @@ $(document).ready(() => {
 });
 
 async function addProjects() {
-	const work = (async() => await fetch('/projects/src/data/project-data.json').then(async(response) => await response.json()))();
+	const work = (async() => await fetch('https://raw.githubusercontent.com/dulldesk/projects/master/src/data/project-data.json').then(async(response) => await response.json()))();
 
  	const cntr = $('#node-cntr');
 
