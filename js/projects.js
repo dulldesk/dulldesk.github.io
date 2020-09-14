@@ -3,6 +3,8 @@ $(document).ready(() => {
 });
 
 async function addProjects() {
+	const work = (async() => await fetch('/projects/src/data/project-data.json').then(async(response) => await response.json()))();
+
  	const cntr = $('#node-cntr');
 
 	const icons = {
@@ -12,8 +14,6 @@ async function addProjects() {
 
 	const bullet = '•';
 	const shortLink = link => link.substring(link.indexOf("//")+2).replace(/\/+$/,'');
-
-	const work = await fetch('/js/projects-list.json').then(async(response) => await response.json());
 
 	for (let key in work) {
 		let node = work[key];
