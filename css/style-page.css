@@ -2,10 +2,6 @@
   font-family: "Segoe UI", sans-serif;
 }
 
-code {
-  font-family: Consolas, monospace;
-}
-
 body {
   padding: 0 60px;
   padding-top: 30px;
@@ -16,9 +12,17 @@ body {
   font-size: 400%;
 }
 
+code {
+  font-family: Consolas, monospace;
+}
+
 small {
   font-style: italic;
   color: grey;
+}
+
+p.no-margin {
+  margin: 0;
 }
 
 .no-select {
@@ -26,8 +30,4 @@ small {
   -webkit-user-select: none;
   -ms-user-select: none;
   user-select: none;
-}
-
-p.no-margin {
-  margin: 0;
 }
