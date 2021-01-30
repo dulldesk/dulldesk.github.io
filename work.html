@@ -1,0 +1,26 @@
+---
+heading: work
+---
+
+<p>Listed here is a selection of my programming projects. A more extensive list is available <a href="/projects">here</a>.</p>
+
+<div class="cntr">
+	{% for project in site.data.projects %}
+		<section>
+			<div class="body">
+				<div>
+					<h2>{{ project.name }}</h2>
+				</div>
+				<div>
+					<p>{{ project.caption }}</p>
+					<p class="lang">{{ project.langs | join:", " }}</p>
+				</div>
+			</div>
+			<aside>
+				{% if project.links.github %}<a href="{{ project.links.github }}" target="_blank"><i class="zmdi zmdi-github zmdi-hc-lg"></i></a> {% endif %}
+				{% if project.links.url %}<a href="{{ project.links.url }}" target="_blank"><i class="zmdi zmdi-link zmdi-hc-lg"></i></a> {% endif %}
+			</aside>
+		</section>
+		{% unless forloop.last %}<hr size="1">{% endunless %}
+	{% endfor %}
+</div>
