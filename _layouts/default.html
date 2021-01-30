@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {% include head.html %}
+</head>
+<body>
+    {% include nav.html %}
+    <div class="v-divider"></div>
+    <hr class="v-divider">
+    <main role="main">
+        <h1>{{ page.heading | downcase }}</h1>
+        <section>
+            {{ content }}
+        </section>
+    </main>
+</body>
+</html>
