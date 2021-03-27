@@ -27,3 +27,9 @@
   links:
     url: https://dulldesk.github.io/chords
     github: https://github.com/dulldesk/chords
+- name: Portfolio site
+  caption: This site. 
+  langs: [Jekyll, HTML, Sass]
+  links:
+    url: https://dulldesk.github.io
+    github: https://github.com/dulldesk/dulldesk.github.io
