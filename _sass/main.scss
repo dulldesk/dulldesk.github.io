@@ -402,3 +402,11 @@ a:hover {
 img.wide-img {
 	max-width: 90%;
 }
+
+.social {
+	font-size: 1.2em;
+
+	&.zmdi-linkedin {
+		vertical-align: 1%;
+	}
+}
