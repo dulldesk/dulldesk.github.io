@@ -1,5 +1,6 @@
 ---
 heading: contact me
+permalink: /contact/
 ---
 
 {% include social.html url="mailto:dulldesk@gmail.com" icon="email" text="dulldesk@gmail.com" %}

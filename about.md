@@ -1,5 +1,6 @@
 ---
 heading: about me
+permalink: /about/
 ---
 
 I greatly enjoy computer programming and scripting; writing code for some purpose is something I often do in my free time. Check out some of my projects [here](/work)!
