@@ -20,9 +20,12 @@ Some other things I'm interested in:
 - Volunteering for various causes (e.g. graphic design, web development, tutoring)
 
 Some achievements and the like:
-- Canadian Computing Competition Senior Level honour roll (2020)
-- National Finalist of CyberTitan III (cybersecurity competition) (2020: 3rd in Canada, 2021)
+- National Finalist of CyberTitan IV (defensive cybersecurity competition) (2021)
+- 2nd place State Award in CyberPatriot XIII (2021)
+- 2nd place in Canada in picoCTF 2021; 7th overall
+- National Finalist of CyberTitan III (2020: 3rd in Canada)
 - Acceptance into SHAD Canada summer program (2020, 2021)
 - Acceptance into Columbia University summer program (2020, 2021)
+- Canadian Computing Competition Senior Level honour roll (2020)
 - Honour roll of several mathematics contests (since 2015)
 - Red Cross Standard First Aid & CPR/AED Level C Certification (2017)
