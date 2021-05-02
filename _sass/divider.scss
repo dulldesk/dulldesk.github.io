@@ -4,12 +4,13 @@
 	$vr:  div#{&};
 	$hr:  hr#{&};
 
-	background: #bdb3a9;
+	background: $text;
+	opacity: 0.25;
 	border: none;
 	
 	@at-root #{$vr} {
 		height: 30vh; 
-		width: 2px;
+		width: 2.5px;
 		margin: auto 4vw;
 	}
 	@at-root #{$hr} {

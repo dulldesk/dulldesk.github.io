@@ -8,8 +8,18 @@ $black: #042a2b;
 $grey: #7e858b;
 $gray: #636261;
 
+:root {
+	--bkgd: #{$brown-lgt};
+	--heading: #{$brown-drk};
+	--heading-secondary: #{$brown-drk};
+	--text: #{$gray};
+	--link: #{$mauve};
+	--link-fade: #{rgba($mauve, 0.7)};
+}
 
-$bkgd: $brown-lgt;
-$head: $brown-drk;
-$text: $gray;
-$link: $mauve; 
+$bkgd: unquote("var(--bkgd)");
+$head: unquote("var(--heading)");
+$head2: unquote("var(--heading-secondary)");
+$text: unquote("var(--text)");
+$link: unquote("var(--link)"); 
+$link-fade: unquote("var(--link-fade)"); 

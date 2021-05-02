@@ -1,0 +1,18 @@
+// @import "colours";
+
+$white: #FFFCF2;
+$charcoal: #373432;
+$green: #00A676;
+$lavendar: #C2AFF0;
+$silver: #969EB0;
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--bkgd: #{$charcoal};
+		--heading: #{$green};
+		--heading-secondary: #{$silver};
+		--text: #{$white};
+		--link: #{$lavendar};
+		--link-fade: #{rgba($lavendar, 0.7)};
+	}
+}
