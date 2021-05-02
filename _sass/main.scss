@@ -288,6 +288,10 @@ main {
 	h1 + p {
 		margin-block-start: 0.5rem;
 	}
+
+	strong, b {
+		letter-spacing: 0.25px;
+	}
 }
 
 
