@@ -1,0 +1,41 @@
+// @import "utils";
+
+.v-divider {
+	$vr:  div#{&};
+	$hr:  hr#{&};
+
+	background: #bdb3a9;
+	border: none;
+	
+	@at-root #{$vr} {
+		height: 30vh; 
+		width: 2px;
+		margin: auto 4vw;
+	}
+	@at-root #{$hr} {
+		width: 40vw;
+		height: 2px;
+		margin: 0.75rem;
+	}
+
+	@media #{$tablet-media} {
+		@at-root #{$hr} {
+			display: block;
+		}
+		@at-root #{$vr} {
+			display: none;
+		}
+	}
+
+	@media screen and (min-width: $tablet - 1) {
+		@at-root #{$hr} {
+			display: none;
+		}
+	}
+
+	@media #{$mobile-media} {
+		@at-root #{$hr} {
+			margin-top: 0.25rem;
+		}		
+	}
+}

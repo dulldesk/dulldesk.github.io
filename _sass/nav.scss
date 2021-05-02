@@ -1,0 +1,120 @@
+// @import "utils";
+// @import "colours";
+
+nav {
+	width: $sidebar_w;
+	font-size: 1.4rem;
+	display: inline-flex;
+	flex-direction: column;
+
+	align-items: flex-end;
+
+
+	> a:first-of-type {
+		color: $head;
+		font-weight: bold;
+		order: 1;
+		display: inline-flex;
+
+		&:hover::after {
+			color: $head;
+		}
+
+		&::after {
+			white-space: pre;
+		}
+	}
+
+	.drop {
+		order: 20;
+		display: inline-flex;
+		flex-flow: column nowrap;
+		align-items: flex-end;
+		font-size: 1.25rem;
+	}
+
+	a::after {
+		content: ' •';
+		visibility: hidden;
+		color: $grey;
+		opacity: 0.6;
+		font-weight: normal;
+		@extend %no-user-select;
+	}
+
+	a.selected::after {
+		visibility: visible;
+	}
+
+	a:hover::after {
+		color: $link;
+		visibility: visible;
+	}
+
+	@at-root #menu-btn, #menu-btn + label {
+		display: none;
+		cursor: pointer;
+		order: 10;
+		@extend %no-user-select;
+	}
+
+	@media #{$tablet-media} {
+		align-items: center;
+		width: 100vw - 2 * $sidepad;
+		flex-flow: row wrap;
+		justify-content: space-between;
+
+		margin: auto {
+			top: 1.5rem;
+			bottom: 1rem;
+		}
+
+		a::after {
+			content: none;
+		}
+
+		> a {
+			flex-grow: 1;
+		}
+
+		.drop {
+			flex-flow: row nowrap;
+			justify-content: space-around;
+			flex-grow: 6;
+		}
+	}
+
+	@media #{$mobile-media} {
+		@at-root #menu-btn + label {
+			display: inline-flex;
+		}
+
+		> a:first-of-type {
+			flex-grow: 0;
+		}
+
+		.drop {
+			display: flex;
+			flex-basis: 100%;
+			max-height: 0;
+			flex-flow: row wrap;
+
+			justify-content: space-around;
+			overflow: hidden;
+
+			a {
+				margin: 0.1rem 0.75rem {
+					bottom: 0;
+				}
+				display: inline-flex;
+			}
+		}
+
+		justify-content: space-between;
+		flex-flow: row wrap;
+
+		@at-root #menu-btn:checked ~ .drop {
+			max-height: 100%;
+		}
+	}
+}

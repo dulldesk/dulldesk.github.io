@@ -1,0 +1,40 @@
+$tablet: 720px;
+$mobile: 450px;
+$tablet-media: "screen and (max-width: #{$tablet})";
+$mobile-media: "screen and (max-width: #{$mobile})";
+
+$sidebar_w: 25vw;
+$sidepad: 10vw;
+
+%no-user-select {
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+%scrollbar {
+	$thumb: rgba($grey, 0.8);
+	$track: rgba(black, 0.1);
+
+	scrollbar-width: thin;
+	scrollbar-color: $thumb $track;
+
+	&::-webkit-scrollbar {
+		width: 10px;
+	}
+	&::-webkit-scrollbar-track {
+		background-color: $track;
+	}
+	&::-webkit-scrollbar-thumb {
+		background-color: $thumb;
+		border-radius: 10px;
+	}
+}
+
+@mixin padding-vert($pad) {
+	padding: {
+		top: $pad;
+		bottom: $pad;
+	}
+}
