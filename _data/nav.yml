@@ -1,8 +1,8 @@
 - name: dulldesk
   link: /
 - name: about
-  link: /about
+  link: /about/
 - name: projects
-  link: /work
+  link: /work/
 - name: contact
-  link: /contact
+  link: /contact/
