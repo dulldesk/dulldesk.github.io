@@ -18,8 +18,8 @@ permalink: /work/
 				</div>
 			</div>
 			<aside>
-				{% if project.links.github %}<a href="{{ project.links.github }}" target="_blank"><i class="zmdi zmdi-github zmdi-hc-lg"></i></a> {% endif %}
-				{% if project.links.url %}<a href="{{ project.links.url }}" target="_blank"><i class="zmdi zmdi-link zmdi-hc-lg"></i></a> {% endif %}
+				{% if project.links.github %}<a href="{{ project.links.github }}" target="_blank" rel="noopener noreferrer"><i class="zmdi zmdi-github zmdi-hc-lg"></i></a> {% endif %}
+				{% if project.links.url %}<a href="{{ project.links.url }}" target="_blank" rel="noopener noreferrer"><i class="zmdi zmdi-link zmdi-hc-lg"></i></a> {% endif %}
 			</aside>
 		</section>
 		{% unless forloop.last %}<hr size="1">{% endunless %}
