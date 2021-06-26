@@ -31,3 +31,33 @@ p.no-margin {
   -ms-user-select: none;
   user-select: none;
 }
+
+
+@media (prefers-color-scheme: dark) {
+	body {
+		background-color: #373432;
+	}
+	h1 {
+		color: #00A676;
+	}
+	h2, h3, h4, h5, h6 {
+		color: #969EB0;
+	}
+	a, a:visited, a:hover {
+		color: #C2AFF0;
+		outline: none;
+		text-decoration: none;
+		transition: all 0.15s ease-out;
+        filter: saturate(0.8);
+	}
+	a, a:visited {
+		border-bottom: 1.5px solid rgba(194,175,240,0.7);
+	}
+	a:hover {
+		border-bottom-color: transparent;
+        filter: saturate(1);
+	}
+	:not(.white) > p, li, small, option, label, td, footer, span {
+		color: #FFFCF2;
+	}
+}
