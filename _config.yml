@@ -1,3 +1,9 @@
+title: dulldesk
+description: Self-taught secondary student programmer seeking to pursue a career in computer science
+logo: /assets/img/logo.svg
+
+plugins:
+  - jekyll-seo-tag
 defaults:
   - scope:
       path: ""
