@@ -4,6 +4,12 @@ logo: /assets/img/logo.svg
 
 plugins:
   - jekyll-seo-tag
+
+collections:
+  favicons:
+    output: true
+    permalink: /:name
+
 defaults:
   - scope:
       path: ""
