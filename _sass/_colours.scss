@@ -3,6 +3,7 @@ $brown-med: #986a2f;
 $brown-lgt: #d6cfc8; 
 $mauve: #782b4c;
 $black: #042a2b;
+$light-red-brown: #bd8b8b;
 
 // grey is lighter than gray
 $grey: #7e858b;
@@ -15,6 +16,7 @@ $gray: #48433f;
 	--text: #{$gray};
 	--link: #{$mauve};
 	--link-fade: #{rgba($mauve, 0.7)};
+	--highlight: #{$light-red-brown};
 }
 
 $bkgd: unquote("var(--bkgd)");
@@ -23,3 +25,4 @@ $head2: unquote("var(--heading-secondary)");
 $text: unquote("var(--text)");
 $link: unquote("var(--link)"); 
 $link-fade: unquote("var(--link-fade)"); 
+$highlight: unquote("var(--highlight)"); 

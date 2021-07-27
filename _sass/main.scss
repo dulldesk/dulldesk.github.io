@@ -34,3 +34,8 @@ html, body {
 nav, main {
 	margin: auto;
 }
+
+::selection {
+	background-color: $highlight;
+	color: white;
+}
