@@ -1,6 +1,7 @@
 ---
 heading: contact me
 permalink: /contact/
+has_icons: true
 ---
 
 {% include social.html url="mailto:dulldesk@gmail.com" icon="email" text="dulldesk@gmail.com" %}
