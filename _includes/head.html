@@ -1,5 +1,26 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+{%- assign icons_font = "/assets/fonts/Material-Design-Iconic-Font.woff2" -%}
+{%- assign icons_css = "/assets/fonts/material-design-iconic-font.css" -%}
+{%- assign font_css = "https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Open+Sans:wght@400&display=swap" -%}
+
+<link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="{{ font_css }}" crossorigin>
+<link rel="preload" as="font" href="https://fonts.gstatic.com/s/opensans/v21/mem8YaGs126MiZpBA-UFVZ0b.woff2" type="font/woff2" crossorigin>
+<link rel="preload" as="font" href="https://fonts.gstatic.com/s/montserrat/v16/JTURjIg1_i6t8kCHKm45_ZpC3gnD_g.woff2" type="font/woff2" crossorigin>
+<link rel="preload" as="style" href="/assets/css/style.css">
+{%- if page.has_icons -%}
+  <link rel="preload" as="font" href="{{ icons_font }}" crossorigin>
+{%- endif -%}
+
+<link rel="stylesheet" type="text/css" href="{{ font_css }}" crossorigin>
+<link rel="stylesheet" type="text/css" href="/assets/css/style.css">
+{%- if page.has_icons -%}
+  <link rel="stylesheet" href="{{ icons_css }}">
+{%- endif -%}
+
 {%- seo title=false -%}
 {%- capture default_title -%} {{ page.heading | downcase }} | {{ site.title }} {%- endcapture -%}
 <title>{{ page.title | default: default_title }}</title>
@@ -13,7 +34,7 @@
 <meta name="msapplication-TileColor" content="{{ dark_theme }}">
 <meta name="theme-color" content="{{ dark_theme }}">
 
-<link rel="stylesheet" type="text/css" href="/assets/css/style.css">
-{%- if page.has_icons -%}
-<link rel="stylesheet" href="/assets/fonts/material-design-iconic-font.css">
-{%- endif -%}
+{%- unless page.has_icons -%}
+  <link rel="prefetch" as="font" href="{{ icons_font }}" crossorigin>
+  <link rel="prefetch" as="style" href="{{ icons_css }}">
+{%- endunless -%}
