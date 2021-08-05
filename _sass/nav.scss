@@ -67,10 +67,7 @@ nav {
 		flex-flow: row wrap;
 		justify-content: space-between;
 
-		margin: auto {
-			top: 1.5rem;
-			bottom: 1rem;
-		}
+		margin: 1.5rem auto 1rem;
 
 		a::after {
 			content: none;
@@ -108,9 +105,7 @@ nav {
 			overflow: hidden;
 
 			a {
-				margin: 0.1rem 0.75rem {
-					bottom: 0;
-				}
+				margin: 0.1rem 0.75rem 0;
 				display: inline-flex;
 			}
 		}

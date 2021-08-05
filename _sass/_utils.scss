@@ -31,10 +31,3 @@ $sidepad: 10vw;
 		border-radius: 10px;
 	}
 }
-
-@mixin padding-vert($pad) {
-	padding: {
-		top: $pad;
-		bottom: $pad;
-	}
-}
