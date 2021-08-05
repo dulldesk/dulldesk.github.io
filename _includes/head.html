@@ -1,6 +1,6 @@
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-{% seo title=false %}
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+{%- seo title=false -%}
 {%- capture default_title -%} {{ page.heading | downcase }} | {{ site.title }} {%- endcapture -%}
 <title>{{ page.title | default: default_title }}</title>
 
