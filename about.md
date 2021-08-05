@@ -3,7 +3,7 @@ heading: about me
 permalink: /about/
 ---
 
-I greatly enjoy computer programming and scripting; writing code for some purpose is something I often do in my free time. Check out some of my projects [here](/work)!
+I greatly enjoy computer programming and scripting; writing code for some purpose is something I often do in my free time. Check out [some of my projects here](/work)!
 
 The languages I am comfortable with are:
 - JavaScript (node.js), Python, and Java for general programming
