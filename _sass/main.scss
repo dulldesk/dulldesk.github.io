@@ -1,17 +1,18 @@
 @import 'colours';
 @import 'utils';
-@import 'text.scss';
+// @import 'text.scss';
 @import 'divider.scss';
-@import 'nav.scss';
+// @import 'nav.scss';
 @import 'content.scss';
-@import 'dark-mode.scss';
+// @import 'root-vars.scss';
+// @import 'dark-mode.scss';
 
 * {
 	box-sizing: border-box;
 }
 
 body {
-	background-color: $bkgd;
+	// background-color: $bkgd;
 	margin: 0;
 	height: 100vh;
 

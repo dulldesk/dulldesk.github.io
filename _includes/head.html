@@ -17,6 +17,10 @@
 
 <link rel="stylesheet" type="text/css" href="{{ font_css }}" crossorigin>
 <link rel="stylesheet" type="text/css" href="/assets/css/style.css">
+
+{%- capture critical_scss -%} {%- include critical.scss -%} {%- endcapture -%}
+<style>{{ critical_scss | scssify }}</style>
+
 {%- if page.has_icons -%}
   <link rel="stylesheet" href="{{ icons_css }}">
 {%- endif -%}

@@ -9,16 +9,6 @@ $light-red-brown: #bd8b8b;
 $grey: #7e858b;
 $gray: #48433f;
 
-:root {
-	--bkgd: #{$brown-lgt};
-	--heading: #{$brown-drk};
-	--heading-secondary: #{$brown-drk};
-	--text: #{$gray};
-	--link: #{$mauve};
-	--link-fade: #{rgba($mauve, 0.7)};
-	--highlight: #{$light-red-brown};
-}
-
 $bkgd: unquote("var(--bkgd)");
 $head: unquote("var(--heading)");
 $head2: unquote("var(--heading-secondary)");
