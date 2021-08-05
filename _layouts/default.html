@@ -1,21 +1,13 @@
-<!DOCTYPE html>
-<html>
-<head>
-    {% include head.html %}
-</head>
-<body>
-    {% include nav.html %}
-    <div class="v-divider"></div>
-    <hr class="v-divider">
-    <main role="main">
-        {%- if page.heading -%}
-            <h1>{{ page.heading | downcase }}</h1>
-        {%- else -%}
-            <h1>{{ page.title | downcase }}</h1>
-        {%- endif -%}
-        <section>
-            {{ content }}
-        </section>
-    </main>
-</body>
-</html>
+---
+layout: base
+---
+
+{%- include nav.html -%}
+<div class="v-divider"></div>
+<hr class="v-divider">
+<main role="main">
+    <h1>{{ page.heading | default: page.title | downcase}}</h1>
+    <section>
+        {{ content }}
+    </section>
+</main>
