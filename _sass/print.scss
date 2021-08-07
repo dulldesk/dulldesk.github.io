@@ -1,0 +1,33 @@
+@import "utils", "colours";
+@import "tablet";
+
+@media print {
+	main {
+		@include tablet-main;
+		padding-top: 0;
+		margin-top: 1rem !important;
+		overflow-y: visible;
+
+		> section {
+			overflow-y: visible !important;
+		}
+	}
+	.v-divider {
+		display: none;
+	}
+
+	html, body {
+		overflow: visible;		
+	}
+	body {
+		flex-flow: column nowrap;
+		justify-content: flex-start;
+	}
+	nav {
+		@include tablet-nav;
+	}
+
+	.toggle {
+		display: none;
+	}
+}

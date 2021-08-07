@@ -1,5 +1,5 @@
-// @import "utils";
-// @import "colours";
+// @import "utils", "colours";
+@import "tablet";
 
 // main content
 main {
@@ -9,15 +9,9 @@ main {
 	align-items: center;
 
 	@media #{$tablet-media} {
-		padding-top: 2vh;
-		padding-bottom: 2vh;
-		width: 100vw;// - $sidepad;
-		max-width: revert;
-		padding-left: $sidepad;
-		margin: 0 {
-			top: 0.5rem;
-		}
+		@include tablet-main;
 	}
+
 	// padding-right: 10vw;
 	a, a:visited {
 		border-bottom: 1.5px solid $link-fade;
@@ -78,6 +72,9 @@ main {
 		flex-direction: row-reverse;
 		justify-content: space-between;
 		align-items: flex-start;
+
+		page-break-inside: avoid;
+		page-break-after: always;
 
 		> aside {
 			display: flex;

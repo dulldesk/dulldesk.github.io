@@ -1,0 +1,33 @@
+// @import "utils";
+
+@mixin tablet-main {
+	padding-top: 2vh;
+	padding-bottom: 2vh;
+	width: 100vw;// - $sidepad;
+	max-width: revert;
+	padding-left: $sidepad;
+	margin: 0 {
+		top: 0.5rem;
+	}
+}
+@mixin tablet-nav {
+	align-items: center;
+	width: 100vw - 2 * $sidepad;
+	flex-flow: row wrap;
+	justify-content: space-between;
+
+	margin: 1.5rem auto 1rem;
+
+	a::after {
+		content: none;
+	}
+	> a {
+		flex-grow: 1;
+	}
+
+	.drop {
+		flex-flow: row nowrap;
+		justify-content: space-around;
+		flex-grow: 6;
+	}
+}
