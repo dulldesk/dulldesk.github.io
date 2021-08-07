@@ -1,14 +1,21 @@
 // @import "colours";
 
+@mixin dark-vars {
+	--bkgd: #{$charcoal};
+	--heading: #{$green};
+	--heading-secondary: #{$silver};
+	--text: #{$white};
+	--link: #{$lavendar};
+	--link-fade: #{rgba($lavendar, 0.7)};
+	--highlight: #{$lighter-green};
+}
 
 @media (prefers-color-scheme: dark) {
 	:root {
-		--bkgd: #{$charcoal};
-		--heading: #{$green};
-		--heading-secondary: #{$silver};
-		--text: #{$white};
-		--link: #{$lavendar};
-		--link-fade: #{rgba($lavendar, 0.7)};
-		--highlight: #{$lighter-green};
+		@include dark-vars;
 	}
+}
+
+[data-theme="dark"] {
+	@include dark-vars;
 }

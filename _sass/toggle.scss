@@ -1,0 +1,183 @@
+@import "toggle-utils";
+@import "colours";
+
+%toggle-cntr {
+	overflow: hidden;
+	background-color: rgba(white, 0.35);
+	border-radius: $bdr-rad;
+	padding: $pad;
+}
+%toggle-cntr-rm {
+	overflow: visible;
+	background: none !important;
+	border-radius: 0;
+	padding: 0;
+}
+
+.toggle {
+	display: flex;
+	flex-flow: column nowrap;
+	position: fixed;
+	bottom: 1rem;
+	right: 1rem;
+
+	> * {
+		cursor: pointer;
+	}
+
+	&__switch {
+		display: flex;
+		flex-flow: column nowrap;
+		justify-content: center;
+
+		font-size: $toggle-sz;
+
+		@extend %toggle-cntr;
+
+		.zmdi {
+			position: relative;
+
+			&.zmdi-brightness-2 {
+				transform: rotate(40deg);
+				top: 4px;
+				left: 4px;
+			}
+			&.zmdi-brightness-5 {
+				top: -2px;
+			}
+		}
+
+		> :first-child {
+			margin-top: $mt;
+		}
+		.toggle__space {
+			height: $space-h;
+			width: 100%;
+		}
+
+		.toggle__handle {
+			width: calc(100% - #{2 * $pad-cntr});
+			height: calc(#{$handle-h} - #{$space-h / 2});
+			display: block;
+			position: absolute;
+			left: $pad-cntr;
+			border-radius: $bdr-rad;
+			z-index: -1;
+
+			top: auto;
+			transition: bottom 0.35s ease-out;
+
+			bottom: $handle-bot-light;
+			background-color: darken($brown-lgt, 40%);
+			opacity: 0.4;
+		}
+
+		// light mode
+		color: rgba($gray, 0.6);
+
+		// dark mode
+		@at-root .toggle--dark & {
+			color: rgba($charcoal, 0.7);
+			background-color: rgba(white, 0.25);
+
+			.toggle__handle {
+				bottom: $handle-bot-dark;
+				background-color: white;
+			}
+		}
+	}
+
+	transition: bottom 0.5s ease-out;
+
+	&__caret {
+		text-align: center;
+		position: absolute;
+		width: 100%;
+		opacity: 0.5;
+		margin-bottom: 0.4rem;
+		transition: transform 0.5s ease-out;
+
+		// light mode
+		color: $gray;
+
+		// dark mode
+		@at-root .toggle--dark & {
+			font-weight: normal;
+			color: white;
+		}
+
+		// toggle up / visible
+		bottom: 100%;
+
+		// toggle down / hidden
+		@at-root .toggle--down {
+			bottom: calc(-#{2 * $pad} - #{2 * $toggle-sz} - #{$mt} - #{$space-h});
+
+			.toggle__caret {
+				transform: rotate(180deg);
+			}
+		}
+	}
+
+
+	// mobile toggle
+	&--mobile {
+		position: unset;
+		order: 1;
+		width: calc(#{2 * $pad} + #{$toggle-sz});
+		margin-right: 1rem;
+
+		@media #{$mobile-media} {
+			display: flex;
+		}
+		display: none;
+
+		@extend %toggle-cntr;
+		background: none;
+		
+		.toggle__switch {
+			flex-direction: row;
+			width: min-content;
+
+			@extend %toggle-cntr-rm;
+			color: $text;
+			opacity: 0.8;
+
+			.zmdi {
+				margin: 0;
+				position: static;
+
+				&.zmdi-brightness-2 {
+					position: relative;
+					top: 0.5px;
+					left: 0;
+				}
+			}
+
+			.toggle__space {
+				height: auto;
+				width: $space-w;
+			}
+
+			position: relative;
+			transition: left 0.5s ease-out;
+			// light mode
+			left: calc(-#{$toggle-sz} - #{$pad-cntr} - #{$space-w / 2});
+		} 
+
+		// dark mode
+		&.toggle--dark .toggle__switch {
+			left: 0;
+		}
+
+		// .toggle__handle, .toggle__caret {
+		// 	display: none;
+		// }
+	}
+
+	@media #{$mobile-media} {
+		&:not(.toggle--mobile) {
+			display: none;
+		}
+	}
+}

@@ -16,7 +16,7 @@ defaults:
       path: ""
     values:
       layout: default
-      has_icons: false
+      has_icons: true
 
 sass:
   style: compressed

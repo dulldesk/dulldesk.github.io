@@ -1,0 +1,22 @@
+{%- assign hide_toggle = "visibility: hidden;" -%}
+
+<div class="toggle {% if include.mobile -%}toggle--mobile{%- endif -%}" style="{{ hide_toggle }}">
+	{%- unless include.mobile -%}
+		<i class="zmdi zmdi-chevron-down toggle__caret"></i>
+	{%- endunless -%}
+	<div class="toggle__switch">
+		<i class="zmdi zmdi-brightness-5"></i>
+		<div class="toggle__space"></div>
+		<i class="zmdi zmdi-brightness-2"></i>
+		{%- unless include.mobile -%}
+			<div class="toggle__handle"></div>
+		{%- endunless -%}
+	</div>
+</div>
+
+{%- unless include.mobile -%}
+	<noscript>
+		<style>.toggle { {{- hide_toggle -}} }</style>
+	</noscript>
+	<script src="/assets/js/theme-toggle.js" defer></script>
+{%- endunless -%}

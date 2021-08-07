@@ -1,4 +1,6 @@
-:root {
+// @import "colours";
+
+:root, [data-theme="light"] {
 	--bkgd: #{$brown-lgt};
 	--heading: #{$brown-drk};
 	--heading-secondary: #{$brown-drk};

@@ -2,6 +2,7 @@
     <input type="checkbox" id="menu-btn">
     <label for="menu-btn">≡</label>
     <a href="/" {% if page.url == "/" %}class="selected"{% endif %}>dulldesk</a>
+    {%- include theme-toggle.html mobile="true" -%}
     <div class="drop">
         {%- for item in site.data.nav offset:1 -%}
             <a href="{{ item.link }}"{% if page.url contains item.link %}class="selected"{% endif %}>{{ item.name }}</a>

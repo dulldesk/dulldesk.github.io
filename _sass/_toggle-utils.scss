@@ -1,0 +1,14 @@
+$bdr-rad: 10px;
+
+$pad-cntr: 3px;
+$pad-handle: 4px;
+$pad: $pad-cntr + $pad-handle;
+$mt: 1px;
+$toggle-sz: 1rem;
+
+$space-h: 5px;
+$space-w: $toggle-sz;
+
+$handle-h: calc(#{$toggle-sz} + #{2 * $pad-handle});
+$handle-bot-light: calc(100% - #{$handle-h} - #{$mt});
+$handle-bot-dark: $pad-cntr;
