@@ -21,4 +21,4 @@ defaults:
 sass:
   style: compressed
 
-exclude: ["**/README.md", "README.md", "Gemfile*"]
+exclude: ["**/README.md", "README.md", "Gemfile*",".git-blame-ignore-revs"]
