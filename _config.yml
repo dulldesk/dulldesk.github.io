@@ -3,6 +3,8 @@ description: I'm Celeste Luo, a self-taught secondary student programmer seeking
 logo: /assets/img/logo.svg
 url: "https://dulldesk.github.io"
 
+theme_toggle: false
+
 plugins:
   - jekyll-seo-tag
 

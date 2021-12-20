@@ -12,4 +12,7 @@ has_icons: true
         {{ content }}
     </section>
 </main>
-{%- include theme-toggle.html -%}
+
+{%- if site.theme_toggle -%}
+    {%- include theme-toggle.html -%}
+{%- endif -%}
