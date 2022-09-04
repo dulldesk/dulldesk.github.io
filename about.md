@@ -21,13 +21,11 @@ Some other things I'm interested in:
 - Volunteering for various causes (e.g. graphic design, web development, tutoring)
 
 Some achievements and the like:
-- National Finalist of CyberTitan IV (defensive cybersecurity competition) (2021: 1st in Canada)
-- 2nd place State Award in CyberPatriot XIII (2021)
-- 2nd place in Canada in picoCTF 2021; 7th globally
-- HOSA ILC (international) finalist (2021)
-- National Finalist of CyberTitan III (2020: 3rd in Canada)
-- Acceptance into SHAD Canada summer program (2020, 2021)
-- Acceptance into Columbia University summer program (2020, 2021)
+- Canada CyberTitan National Finalist (defensive cybersecurity competition) (2021: 1st; 2020: 3rd)
+- US CyberPatriot XIII National Finalist (2022: 5th)
+- picoCTF / CanHack top 3 (2022: 1st in Canada, 3rd globally; 2021: 2nd in Canada, 7th globally)
+- HOSA ILC (international) finalist (2021, 2022)
+- SHAD Canada summer program (2021)
+- Columbia University summer program (2020)
 - Canadian Computing Competition Senior Level honour roll (2020)
-- Honour roll of several mathematics contests (since 2015)
 - Red Cross Standard First Aid & CPR/AED Level C Certification (2017)
