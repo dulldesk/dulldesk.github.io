@@ -10,6 +10,30 @@
   links:
     github: https://github.com/dulldesk/notes/
     url: https://dulldesk.github.io/notes/
+- name: Words API
+  caption: An API that returns a noun, adjective, or animal via a GET request
+  langs: [Node.js, Express.js, Heroku]
+  links:
+    github: https://github.com/dulldesk/words-api/
+    url: https://random-word-form.herokuapp.com/
+- name: Quiz Builder
+  caption: A drag-and-drop dropdown quiz builder.
+  langs: [Flask, React.js, SQLite]
+  links:
+    github: https://github.com/dulldesk/quiz-builder/
+    url: https://dulldesk.github.io/quiz-builder/
+- name: Minesweeper Risk
+  caption: Variant of the classic minesweeper game
+  langs: [React.js, TypeScript]
+  links:
+    github: https://github.com/dulldesk/minesweeper-risk/
+    url: https://dulldesk.github.io/minesweeper-risk/
+- name: HackItForward
+  caption: A website that offers developers a platform to work on projects via challenges. Submitted for KuriusHacks 2020; awarded first place and taken under development for the Kurius non-profit.
+  langs: [Django, HTML, CSS]
+  links:
+    # url: https://hackitforward.com
+    github: https://github.com/KuriusMTL/HackItForward
 - name: Chords
   caption: A small site with an online piano. One can play, save, and share chords.
   langs: [HTML, CSS, JavaScript, JQuery]
@@ -21,18 +45,6 @@
   langs: [JavaScript, JQuery, HTML, CSS, Chrome Extension API]
   links:
     github: https://github.com/dulldesk/quick-notes
-- name: Words API
-  caption: An API that returns a noun, adjective, or animal via a GET request
-  langs: [Node.js, Express.js, Heroku]
-  links:
-    github: https://github.com/dulldesk/words-api/
-    url: https://random-word-form.herokuapp.com/
-- name: HackItForward
-  caption: A website that offers developers a platform to work on projects via challenges. Originally submitted for KuriusHacks 2020; awarded first place and is under development for the Kurius organization. 
-  langs: [Django, HTML, CSS]
-  links:
-    url: https://hackitforward.com
-    github: https://github.com/KuriusMTL/HackItForward
 - name: Portfolio site
   caption: This site. 
   langs: [Jekyll, HTML, Sass]
