@@ -1,15 +1,15 @@
-- name: Username Generator
-  caption: Generates a username based on a random adjective and noun.
-  langs: [HTML, CSS, JavaScript, JQuery]
-  links:
-    github: https://github.com/dulldesk/user-gen/
-    url: https://dulldesk.github.io/user-gen/
 - name: Notes
   caption: my public personal notes storage
   langs: [Jekyll, Sass]
   links:
     github: https://github.com/dulldesk/notes/
     url: https://dulldesk.github.io/notes/
+- name: MCPT CTF Platform
+  caption: Contributor to my high school's Capture-the-Flag problem/contest platform
+  langs: [Django, Sass]
+  links:
+    github: https://github.com/mcpt/ctf
+    url: https://ctf.mcpt.ca
 - name: Words API
   caption: An API that returns a noun, adjective, or animal via a GET request
   langs: [Node.js, Express.js, Heroku]
@@ -28,23 +28,6 @@
   links:
     github: https://github.com/dulldesk/minesweeper-risk/
     url: https://dulldesk.github.io/minesweeper-risk/
-- name: HackItForward
-  caption: A website that offers developers a platform to work on projects via challenges. Submitted for KuriusHacks 2020; awarded first place and taken under development for the Kurius non-profit.
-  langs: [Django, HTML, CSS]
-  links:
-    # url: https://hackitforward.com
-    github: https://github.com/KuriusMTL/HackItForward
-- name: Chords
-  caption: A small site with an online piano. One can play, save, and share chords.
-  langs: [HTML, CSS, JavaScript, JQuery]
-  links:
-    url: https://dulldesk.github.io/chords
-    github: https://github.com/dulldesk/chords
-- name: Quick Notes
-  caption: Browser extension to take short, quick notes
-  langs: [JavaScript, JQuery, HTML, CSS, Chrome Extension API]
-  links:
-    github: https://github.com/dulldesk/quick-notes
 - name: Portfolio site
   caption: This site. 
   langs: [Jekyll, HTML, Sass]

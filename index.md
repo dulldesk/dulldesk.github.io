@@ -3,6 +3,7 @@ title: dulldesk
 heading: hi there!
 ---
 
-I'm Celeste Luo, but I often go by the moniker **dulldesk**. I'm studying Computer Science at the University of Waterloo. This is my portfolio website hosting information about [me](/about/), my [work](/work/), and [contact information](/contact/). 
-
-You may also be interested in my [resume](./Resume.pdf).
+I'm Celeste Luo, sometimes a.k.a. **dulldesk**:
+- :graduation_cap: Studying Computer Science at the University of Waterloo
+- :scroll: Check the sidebar for more on what I do!
+- :joker: My [Resume](./Resume.pdf) • [linkedin](https://www.linkedin.com/in/celesteluo)
