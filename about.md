@@ -6,10 +6,9 @@ permalink: /about/
 Sometimes I code; check out some of my [projects](/work/)!
 
 Some of the languages and tools I am comfortable with are:
-- Python, JavaScript & node.js, Java, PHP
-- HTML, CSS/Sass, JavaScript, jQuery
-- Jekyll, Django, Flask, React, Express
-- Git, LaTeX, SQL, Anaconda, Docker
+- Python, JavaScript & node.js, Java, PHP, C
+- Django, React, Express, Flask, Jekyll, Sass, jQuery
+- Git, Docker, SQL, Anaconda, LaTeX
 - PowerShell for personal system scripts (+ some bash)
 
 I'm also interested in cybersecurity, which at the moment is most quantifiable by competitions.
