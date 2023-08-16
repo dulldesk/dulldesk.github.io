@@ -6,7 +6,7 @@ permalink: /about/
 Sometimes I code; check out some of my [projects](/work/)!
 
 Some of the languages and tools I am comfortable with are:
-- Python, JavaScript & node.js, Java, PHP, C
+- Python, JavaScript / TypeScript / Node.js, Java, PHP, C
 - Django, React, Express, Flask, Jekyll, Sass, jQuery
 - Git, Docker, SQL, Anaconda, LaTeX
 - PowerShell for personal system scripts (+ some bash)
