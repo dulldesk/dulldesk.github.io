@@ -21,3 +21,15 @@
   links:
     github: https://github.com/dulldesk/minesweeper-risk/
     url: https://dulldesk.github.io/minesweeper-risk/
+- name: Words API
+  caption: An API that returns a noun, adjective, or animal. Customizable by count & starting letter. 
+  langs: [Node.js, Express.js]
+  links:
+    github: https://github.com/dulldesk/words-api/
+    url: https://random-word-form.repl.co/
+- name: Quiz Builder
+  caption: A drag-and-drop dropdown quiz builder. (Link is a serverless local demo).
+  langs: [Flask, React.js, SQLite]
+  links:
+    github: https://github.com/dulldesk/quiz-builder/
+    url: https://dulldesk.github.io/quiz-builder/
