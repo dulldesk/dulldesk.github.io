@@ -19,8 +19,8 @@ $sidepad: 10vw;
 	$thumb: rgba($grey, 0.8);
 	$track: rgba(black, 0.1);
 
-	scrollbar-width: thin;
-	scrollbar-color: $thumb $track;
+	//scrollbar-width: thin;
+	//scrollbar-color: $thumb $track;
 
 	&::-webkit-scrollbar {
 		width: 10px;

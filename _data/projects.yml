@@ -4,25 +4,14 @@
   links:
     github: https://github.com/dulldesk/notes/
     url: https://dulldesk.github.io/notes/
-- name: MCPT CTF Platform
+- name: CTF Platform
   caption: Contributor to my high school's Capture-the-Flag problem/contest platform
   langs: [Django, Sass]
   links:
     github: https://github.com/mcpt/ctf
     url: https://ctf.mcpt.ca
-- name: PowerShell scripts
-  caption: Some of my personal scripts and utilities
-  langs: [PowerShell]
-  links:
-    github: https://github.com/dulldesk/posh-scripts
-- name: Minesweeper Risk
-  caption: Variant of the classic minesweeper game
-  langs: [React.js, TypeScript]
-  links:
-    github: https://github.com/dulldesk/minesweeper-risk/
-    url: https://dulldesk.github.io/minesweeper-risk/
 - name: Words API
-  caption: An API that returns a noun, adjective, or animal. Customizable by count & starting letter. 
+  caption: An API that returns a noun, adjective, or animal. Customizable by count & starting letter.
   langs: [Node.js, Express.js]
   links:
     github: https://github.com/dulldesk/words-api/
@@ -33,3 +22,14 @@
   links:
     github: https://github.com/dulldesk/quiz-builder/
     url: https://dulldesk.github.io/quiz-builder/
+- name: Minesweeper Risk
+  caption: Variant of the classic minesweeper game
+  langs: [React.js, TypeScript]
+  links:
+    github: https://github.com/dulldesk/minesweeper-risk/
+    url: https://dulldesk.github.io/minesweeper-risk/
+- name: PowerShell scripts
+  caption: Some of my personal scripts and utilities
+  langs: [PowerShell]
+  links:
+    github: https://github.com/dulldesk/posh-scripts
