@@ -55,6 +55,16 @@ main {
 
 	strong, b {
 		letter-spacing: 0.25px;
+		font-weight: bold;
+	}
+
+	h1 + section > p:first-child {
+		margin-top: 0;
+	}
+
+	li, p, a, span {
+		font-weight: lighter;
+		font-size: 1.05rem;
 	}
 }
 
@@ -94,7 +104,8 @@ main {
 		font-size: 1.35rem;
 		font-family: 'Open Sans', sans-serif;
 		margin-top: 0;
-		margin-bottom: 0.5rem;
+		margin-bottom: 0.2rem;
+		font-weight: 400;
 	}
 
 	p {
