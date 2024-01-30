@@ -15,7 +15,7 @@
   langs: [Node.js, Express.js]
   links:
     github: https://github.com/dulldesk/words-api/
-    url: https://random-word-form.repl.co/
+    url: https://random-word-form.herokuapp.com/
 - name: Quiz Builder
   caption: A drag-and-drop dropdown quiz builder. (Link is a serverless local demo).
   langs: [Flask, React.js, SQLite]
