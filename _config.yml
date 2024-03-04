@@ -25,3 +25,5 @@ sass:
   style: compressed
 
 exclude: ["**/README.md", "README.md", "Gemfile*",".git-blame-ignore-revs",".gitignore"]
+
+google_site_verification: "ao99jYX2hsTzlJgRmDsSTTMxRYETe0k2cXyq2ZLF2Qo"
