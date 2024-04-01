@@ -2,6 +2,7 @@
 heading: work
 permalink: /work/
 has_icons: true
+description: Past internships and projects
 ---
 
 Previous work experience includes:

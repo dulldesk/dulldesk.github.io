@@ -1,9 +1,10 @@
 ---
 heading: about me
 permalink: /about/
+description: I code.
 ---
 
-I'm an undergraduate studying computer science at the University of Waterloo.
+I'm studying computer science at the University of Waterloo.
 Sometimes I code; check out some of my [projects](/work/)!
 
 Some of the languages and tools I am comfortable with are:

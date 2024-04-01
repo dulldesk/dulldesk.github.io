@@ -2,6 +2,7 @@
 heading: contact me
 permalink: /contact/
 has_icons: true
+description: Find me on GitHub and LinkedIn
 ---
 
 {%- include social.html url="mailto:dulldesk@gmail.com" icon="email" text="dulldesk@gmail.com" -%}
