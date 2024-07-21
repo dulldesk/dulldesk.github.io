@@ -6,7 +6,8 @@ description: Past internships and projects
 ---
 
 Previous work experience includes:
-- **Network Bandwidth Prediction Research** at the University of Waterloo *(since Sept 2023)*
+- **Software Developer Intern** (Build & Tools team) at PlayStation *(May 2024 - present)*
+- **Network Bandwidth Prediction Research** at the University of Waterloo *(Sept - Dec 2023)*
 - **Security Software Developer** at ISARA Corporation *(May - Aug 2023)*
 - **Website Developer / Graphic Designer** at Action CIND *(since Feb 2019)*
 
