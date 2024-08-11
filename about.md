@@ -4,14 +4,14 @@ permalink: /about/
 description: I code.
 ---
 
-I'm studying computer science at the University of Waterloo.
-Sometimes I code; check out some of my [projects](/work/)!
+I'm studying Computer Science at the University of Waterloo.
+Sometimes I code; check out some of my [work](/work/)!
 
 Some of the languages and tools I am comfortable with are:
-- Python, JavaScript / TypeScript / Node.js, Java, C/C++, PHP, Ruby, Go
-- Django, React, Express, Flask, Jekyll, Sass, jQuery
-- Git, Docker, SQL, Anaconda, LaTeX
-- PowerShell for personal system scripts (+ some bash)
+- Python, JavaScript/Node.js, TypeScript, Java, C/C++, PHP, Ruby, Go
+- Django, React, Angular, Express, Flask, Sass
+- Docker, SQL, Anaconda, Jenkins, Groovy, LaTeX, Git
+- PowerShell for personal system scripts (+ bash)
 
 I'm also interested in cybersecurity, which at the moment is most quantifiable by competitions.
 My tools include virtual machines (Windows and Linux), Wireshark, Python, PowerShell/Bash,
