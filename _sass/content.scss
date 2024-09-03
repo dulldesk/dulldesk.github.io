@@ -143,3 +143,17 @@ main {
 .zmdi-hc-lg {
 	font-size: 1.5rem;
 }
+
+#cat {
+	color: $text;
+	font-size: 0.9rem;
+	margin: 0rem;
+
+	@at-root ul + & {
+		margin-top: -1rem;
+	}
+
+	& + p {
+		margin-top: 0;
+	}
+}

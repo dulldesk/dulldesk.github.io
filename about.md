@@ -4,14 +4,14 @@ permalink: /about/
 description: I code.
 ---
 
-I'm studying Computer Science at the University of Waterloo.
-Sometimes I code; check out some of my [work](/work/)!
+{% include cat-header.html %}
 
-Some of the languages and tools I am comfortable with are:
+I study Computer Science at the University of Waterloo.
+I learn fast, but some of the languages and tools I'm more familiar with include:
 - Python, JavaScript/Node.js, TypeScript, Java, C/C++, PHP, Ruby, Go
 - Django, React, Angular, Express, Flask, Sass
 - Docker, SQL, Anaconda, Jenkins, Groovy, LaTeX, Git
-- PowerShell for personal system scripts (+ bash)
+- PowerShell, Bash for personal system scripts
 
 I'm also interested in cybersecurity, which at the moment is most quantifiable by competitions.
 My tools include virtual machines (Windows and Linux), Wireshark, Python, PowerShell/Bash,
@@ -19,7 +19,8 @@ Docker containers,
 and an extensive laundry list of forensics and system utilities.
 
 Some achievements and the like:
-- ECSC Team Canada 2023 *(European Cyber Security Challenge)*
+- FS-ISAC Women in Cyber Scholarship recipient (2024)
+- ECSC Team Canada 2023, 2024 *(European Cyber Security Challenge)*
 - **3x national finalist** &mdash; Canada CyberTitan *(defensive cybersecurity competition)*
 	- 2022, 2021: 1st
 	- 2020: 3rd
