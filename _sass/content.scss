@@ -63,8 +63,12 @@ main {
 	}
 
 	li, p, a, span {
-		font-weight: lighter;
+		font-weight: normal;
 		font-size: 1.05rem;
+
+		@media #{$dark-mode} {
+			font-weight: lighter;
+		}
 	}
 }
 

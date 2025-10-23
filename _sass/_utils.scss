@@ -4,6 +4,7 @@ $tablet: 720px;
 $mobile: 450px;
 $tablet-media: "screen and (max-width: #{$tablet})";
 $mobile-media: "screen and (max-width: #{$mobile})";
+$dark-mode: "(prefers-color-scheme: dark)";
 
 $sidebar_w: 25vw;
 $sidepad: 10vw;
