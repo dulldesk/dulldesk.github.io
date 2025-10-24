@@ -12,8 +12,8 @@
 }
 
 body {
-	// background-color: $bkgd;
-	margin: 0;
+	margin: 0 auto;
+	max-width: 1300px;
 	height: 100vh;
 
 	display: flex;
@@ -24,11 +24,16 @@ body {
 	@media #{$tablet-media} {
 		flex-flow: column nowrap;
 		justify-content: flex-start;
+		padding: $sidepad-tablet;
+		display: block;
 	}
 }
 
 html, body {
 	overflow: hidden;
+	@media #{$tablet-media} {
+		overflow: revert;
+	}
 }
 
 nav, main {

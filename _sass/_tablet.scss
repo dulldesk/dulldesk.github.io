@@ -1,22 +1,16 @@
 // @import "utils";
 
 @mixin tablet-main {
-	padding-top: 2vh;
-	padding-bottom: 2vh;
-	width: 100vw;// - $sidepad;
-	max-width: revert;
-	padding-left: $sidepad;
-	margin: 0 {
-		top: 0.5rem;
-	}
+	width: revert;
+	overflow: revert;
 }
 @mixin tablet-nav {
 	align-items: center;
-	width: 100vw - 2 * $sidepad;
 	flex-flow: row wrap;
 	justify-content: space-between;
 
-	margin: 1.5rem auto 1rem;
+	margin: 0 auto;
+	width: 100%;
 
 	a::after {
 		content: none;
@@ -29,5 +23,36 @@
 		flex-flow: row nowrap;
 		justify-content: space-around;
 		flex-grow: 6;
+		gap: 3rem;
+		margin-left: 3rem;
+	}
+}
+@mixin mobile-nav {
+	flex-flow: row wrap;
+	justify-content: space-between;
+	width: 100%;
+
+	margin: 0;
+
+	> a:first-of-type {
+		flex-grow: 1;
+	}
+
+	.drop {
+		display: flex;
+		flex-flow: column nowrap;
+		flex-basis: 100%;
+		max-height: 0;
+		overflow: hidden;
+		gap: 0;
+
+		position: absolute;
+		right: $sidepad-tablet;
+		top: 3.5rem;
+
+		a {
+			margin: 0;
+			display: inline-flex;
+		}
 	}
 }

@@ -66,30 +66,10 @@ nav {
 	}
 
 	@media #{$mobile-media} {
-		flex-flow: row wrap;
-		justify-content: space-between;
+		@include mobile-nav;
 
 		@at-root #menu-btn + label {
 			display: inline-flex;
-		}
-
-		> a:first-of-type {
-			flex-grow: 1;
-		}
-
-		.drop {
-			display: flex;
-			flex-basis: 100%;
-			max-height: 0;
-			flex-flow: row wrap;
-
-			justify-content: space-around;
-			overflow: hidden;
-
-			a {
-				margin: 0.1rem 0.75rem 0;
-				display: inline-flex;
-			}
 		}
 
 		@at-root #menu-btn:checked ~ .drop {

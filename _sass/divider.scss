@@ -14,9 +14,9 @@
 		margin: auto 4vw;
 	}
 	@at-root #{$hr} {
-		width: 40vw;
+		width: 50vw;
 		height: 2px;
-		margin: 0.75rem;
+		margin: 0.75rem auto;
 	}
 
 	@media #{$tablet-media} {
@@ -36,7 +36,8 @@
 
 	@media #{$mobile-media} {
 		@at-root #{$hr} {
-			margin-top: 0.25rem;
-		}		
+			margin-top: calc($sidepad-tablet / 2);
+			visibility: hidden;
+		}
 	}
 }

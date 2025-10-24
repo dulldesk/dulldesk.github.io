@@ -7,7 +7,8 @@ $mobile-media: "screen and (max-width: #{$mobile})";
 $dark-mode: "(prefers-color-scheme: dark)";
 
 $sidebar_w: 25vw;
-$sidepad: 10vw;
+$sidepad: 2rem;
+$sidepad-tablet: 1.2rem;
 
 %no-user-select {
 	-moz-user-select: none;
